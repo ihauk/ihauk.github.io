@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+
+.nav ul #resumes{height:27px;line-height:27px;background:url(http://myimg.zhaopin.com/images/new_v4/nav1R.gif) no-repeat right top;margin:14px 1px 0 0;font-weight:bold;color:#3E419E;}
+.nav ul #resumes a{display:block;padding:0 8px;background:url(http://myimg.zhaopin.com/images/new_v4/nav1L.gif) no-repeat left top;color:#3E419E;text-decoration:none;}
+.nav ul #resumes a:hover{color:#3E419E;text-decoration:underline;}

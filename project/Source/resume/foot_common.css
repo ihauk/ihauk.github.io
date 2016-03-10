@@ -1,0 +1,33 @@
+.link {
+    border-top: 3px solid #3F7BD3;
+    color: #666666;
+    margin: 10px auto 0;
+    padding-top: 10px;
+    width: 950px;
+	position:relative;
+}
+.links {
+    margin: 5px auto 0;
+    padding-top: 5px;
+    width: 950px;
+}
+.link a {
+    color: #315AAA;
+    text-decoration: none;
+}
+.link a:hover {
+    text-decoration: underline;
+}
+.links {
+    margin: 5px auto 0;
+    padding-top: 5px;
+    width: 950px;
+}
+.link_1 {
+    font: 12px/1.8em tahoma,simsun;
+    text-align: center;
+
+}
+.link_1 .link_2 {
+    color: #777777;
+}
