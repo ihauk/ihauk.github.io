@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title><![CDATA[Mac开启root用户]]></title>
+      <url>http://yoursite.com/2016/03/16/Mac%20%E5%BC%80%E5%90%AFroot%E7%94%A8%E6%88%B7/</url>
+      <content type="html"><![CDATA[<ol>
+<li><p>从 Apple 菜单中选取系统偏好设置…。</p>
+</li>
+<li><p>从显示菜单中选取用户与群组。</p>
+</li>
+<li><p>点按锁图标并使用管理员帐户进行鉴定。</p>
+</li>
+<li><p>点按“登录选项…”。</p>
+</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
+<ol>
+<li>点按右下部的“编辑…”或“加入…”按钮。</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/185813_aCYb_218940.png" alt="在此输入图片描述"></p>
+<ol>
+<li>点按“打开目录实用工具…”按钮。</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/185853_HYBT_218940.png" alt="在此输入图片描述"></p>
+<ol>
+<li>点按“目录实用工具”窗口中的锁图标,输入管理员帐户名称和密码，然后点按“好”。</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/185938_9nqs_218940.png" alt="在此输入图片描述"></p>
+<ol>
+<li>从编辑菜单中选取启用 Root 用户。</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/190403_naFo_218940.jpg" alt="在此输入图片描述"></p>
+<ol>
+<li>在“密码”和“验证”字段中输入您想要使用的 root 密码，然后点按“好”。</li>
+</ol>
+<p><img src="http://static.oschina.net/uploads/space/2015/0512/190423_yBSg_218940.png" alt="在此输入图片描述"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[xcode键盘君的常用快捷键及设置]]></title>
       <url>http://yoursite.com/2016/03/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/</url>
       <content type="html"><![CDATA[<p>这是一篇神奇的文章。。。。。</p>
@@ -22,21 +59,6 @@
     <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://yoursite.com/2016/03/10/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello hexo]]></title>
-      <url>http://yoursite.com/2016/03/10/hello_hexo/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
