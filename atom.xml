@@ -54,10 +54,10 @@
   
   <entry>
     <title>xcode键盘君的常用快捷键及设置</title>
-    <link href="http://yoursite.com/2016/03/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://yoursite.com/2016/03/10/【工具篇】xcode键盘君的常用快捷键及设置/</id>
-    <published>2016-03-10T11:06:42.000Z</published>
-    <updated>2016-03-14T03:47:07.000Z</updated>
+    <link href="http://yoursite.com/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://yoursite.com/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/</id>
+    <published>2015-12-10T11:06:42.000Z</published>
+    <updated>2016-03-16T11:17:23.000Z</updated>
     
     <content type="html">&lt;p&gt;这是一篇神奇的文章。。。。。&lt;/p&gt;
 &lt;h3 id=&quot;一、常用快捷键&quot;&gt;&lt;a href=&quot;#一、常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;一、常用快捷键&quot;&gt;&lt;/a&gt;一、常用快捷键&lt;/h3&gt;&lt;p&gt;快捷键大家谁都知道一些，也都在用：&lt;/p&gt;
@@ -86,10 +86,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/03/10/hello-world/"/>
-    <id>http://yoursite.com/2016/03/10/hello-world/</id>
-    <published>2016-03-10T08:23:25.000Z</published>
-    <updated>2016-03-11T06:16:22.000Z</updated>
+    <link href="http://yoursite.com/2015/06/18/hello-world/"/>
+    <id>http://yoursite.com/2015/06/18/hello-world/</id>
+    <published>2015-06-18T11:06:42.000Z</published>
+    <updated>2016-03-16T11:17:44.000Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
