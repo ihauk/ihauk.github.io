@@ -13,8 +13,8 @@
 </li>
 <li><p>点按锁图标并使用管理员帐户进行鉴定。</p>
 </li>
-<li><p>. 点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
-</li>
+<li><p>点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
+ <a id="more"></a></li>
 <li>点按右下部的“编辑…”或“加入…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185813_aCYb_218940.png" alt="在此输入图片描述"></li>
 <li>点按“打开目录实用工具…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185853_HYBT_218940.png" alt="在此输入图片描述"></li>
 <li>点按“目录实用工具”窗口中的锁图标,输入管理员帐户名称和密码，然后点按“好”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185938_9nqs_218940.png" alt="在此输入图片描述"></li>
@@ -27,7 +27,8 @@
     <entry>
       <title><![CDATA[xcode键盘君的常用快捷键及设置]]></title>
       <url>http://yoursite.com/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/</url>
-      <content type="html"><![CDATA[<p>这是一篇神奇的文章。。。。。</p>
+      <content type="html"><![CDATA[<p>这是一篇神奇的文章，在这里你会了解常用快捷键，更会学会一些超便捷的装b技能</p>
+<a id="more"></a>
 <h3 id="一、常用快捷键"><a href="#一、常用快捷键" class="headerlink" title="一、常用快捷键"></a>一、常用快捷键</h3><p>快捷键大家谁都知道一些，也都在用：</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 编译 app ：<span class="built_in">CMD</span> + B </span><br><span class="line"><span class="number">2</span>. 运行程序 ：<span class="built_in">CMD</span> + R </span><br><span class="line"><span class="number">3</span>. 清楚缓存 ：<span class="built_in">CMD</span> + <span class="built_in">SHIFT</span> + K </span><br><span class="line"><span class="number">4</span>. 在文件中查找 ： <span class="built_in">CMD</span> + F </span><br><span class="line"><span class="number">5</span>. 全局搜索 ：<span class="built_in">CMD</span> + <span class="built_in">SHIFT</span> + F </span><br><span class="line"><span class="number">6</span>. 开启/关闭 断点调试 ：<span class="built_in">CMD</span> + Y</span><br></pre></td></tr></table></figure>
 <p>看到这里，你就可能觉得无聊，这些都是最常用不过的了，您别急，如果您对以上的这些快捷键都了然于胸，那么直接进入下一个章节吧。</p>
