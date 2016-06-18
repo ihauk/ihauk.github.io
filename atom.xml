@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-17T04:16:44.000Z</updated>
+  <updated>2016-06-18T08:47:34.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC环境安装protobuf简明教程</title>
+    <link href="http://yoursite.com/2016/06/18/MAC%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85protobuf%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2016/06/18/MAC环境安装protobuf简明教程/</id>
+    <published>2016-06-18T08:31:09.000Z</published>
+    <updated>2016-06-18T08:47:34.000Z</updated>
+    
+    <content type="html">&lt;p&gt;protobuf 是什么？ 请百度！&lt;br&gt;本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！&lt;br&gt;废话不多说，直接上步骤：&lt;/p&gt;
+&lt;h3 id=&quot;1-下载-protobuf-的源码：&quot;&gt;&lt;a href=&quot;#1-下载-protobuf-的源码：&quot; class=&quot;headerlink&quot; title=&quot;1. 下载 protobuf 的源码：&quot;&gt;&lt;/a&gt;1. 下载 protobuf 的源码：&lt;/h3&gt;&lt;figure class=&quot;highlight crmsh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;https&lt;/span&gt;://github.com/google/protobuf.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2-安装-必要的工具：automake-与-libtool：&quot;&gt;&lt;a href=&quot;#2-安装-必要的工具：automake-与-libtool：&quot; class=&quot;headerlink&quot; title=&quot;2. 安装 必要的工具：automake 与 libtool：&quot;&gt;&lt;/a&gt;2. 安装 必要的工具：automake 与 libtool：&lt;/h3&gt;&lt;figure class=&quot;highlight mipsasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;keyword&quot;&gt;brew &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;automake  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;keyword&quot;&gt;brew &lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;install &lt;/span&gt;libtool&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-进入源码目录，Run-autogen-sh&quot;&gt;&lt;a href=&quot;#3-进入源码目录，Run-autogen-sh&quot; class=&quot;headerlink&quot; title=&quot;3. 进入源码目录，Run autogen.sh&quot;&gt;&lt;/a&gt;3. 进入源码目录，Run autogen.sh&lt;/h3&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ &lt;/span&gt;./autogen.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;4-安装-protobuf-：&quot;&gt;&lt;a href=&quot;#4-安装-protobuf-：&quot; class=&quot;headerlink&quot; title=&quot;4. 安装 protobuf ：&quot;&gt;&lt;/a&gt;4. 安装 protobuf ：&lt;/h3&gt;&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ./configure  // --prefix=your path(指定安装路径)(可选) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ make&lt;span class=&quot;built_in&quot;&gt; check &lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ make  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认安装到 /usr/local 目录下，若要自定义安装路径，执行configure时，指定–prefix=/usr/local/protobuf即可。例：&lt;br&gt;&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$ &lt;/span&gt;./configure --prefix=&lt;span class=&quot;regexp&quot;&gt;/usr/local&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/protobuf&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;5-环境变量的配置&quot;&gt;&lt;a href=&quot;#5-环境变量的配置&quot; class=&quot;headerlink&quot; title=&quot;5. 环境变量的配置&quot;&gt;&lt;/a&gt;5. 环境变量的配置&lt;/h3&gt;&lt;p&gt;如果你采取的是默认的安装路径，则不用特意的设置环境变量，终端里 直接运行 protoc 即可找到该命令。如果你采用了自定义的安装路径，那么最好配置一下环境变量，将它的bin和lib目录分别加入到PATH和LD_LIBRARY_PATH环境变量，以方便直接调用。要不然每次都要进入安装目录里 执行 protoc 命令，岂不是费时费力。&lt;/p&gt;
+&lt;p&gt;如何配置环境变量，如下所示：&lt;br&gt;编辑 /etc/profile 文件，在文件末尾追加 &lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;export PATH=&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/usr/local/protobuf/bin&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export LD_LIBRARY_PATH=&lt;span class=&quot;variable&quot;&gt;$LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;:/usr/local/protobuf/lib&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其中，/usr/local/protobuf 是你的自定义安装目录&lt;/p&gt;
+&lt;h3 id=&quot;注：安装过程中遇到的问题：&quot;&gt;&lt;a href=&quot;#注：安装过程中遇到的问题：&quot; class=&quot;headerlink&quot; title=&quot;注：安装过程中遇到的问题：&quot;&gt;&lt;/a&gt;注：安装过程中遇到的问题：&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;步骤三 Run autogen.sh 的时候，一定要有梯子，科学上网你懂得&lt;/li&gt;
+&lt;li&gt;步骤三 ./configure时，如果说没有权限，chmod +x configure&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;步骤四 make check 的时候 可能会报错 fatal error: ‘tr1/tuple’ file not found，运行如下命令解决 &lt;a href=&quot;https://github.com/google/protobuf/issues/51&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;解决办法&lt;/a&gt;在这里，终端运行如下命令&lt;/p&gt;
+ &lt;figure class=&quot;highlight fix&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;./configure CPPFLAGS&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;-DGTEST_USE_OWN_TR1_TUPLE=1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;步骤五 配置环境变量的时候，/etc/profile 是一个只读文件，我是 找到 profile 文件，添加了写权限解决的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;protobuf 是什么？ 请百度！&lt;br&gt;本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！&lt;br&gt;废话不多说，直接上步骤：&lt;/p&gt;
+&lt;h3 id=&quot;1-下载-protobuf-的源码：&quot;&gt;&lt;a href=&quot;#1-下载-prot
+    
+    </summary>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="protobuf" scheme="http://yoursite.com/tags/protobuf/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac开启root用户</title>
@@ -59,7 +103,7 @@
     <link href="http://yoursite.com/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
     <id>http://yoursite.com/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/</id>
     <published>2015-12-10T11:06:42.000Z</published>
-    <updated>2016-06-16T11:45:13.000Z</updated>
+    <updated>2016-06-16T11:47:56.000Z</updated>
     
     <content type="html">&lt;p&gt;这是一篇神奇的文章，在这里你会了解常用快捷键，更会学会一些超便捷的装b技能.不用犹豫，保证学有所值！我将为你节省时间，为了你的诗和远方~&lt;/p&gt;
 &lt;h3 id=&quot;一、常用快捷键&quot;&gt;&lt;a href=&quot;#一、常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;一、常用快捷键&quot;&gt;&lt;/a&gt;一、常用快捷键&lt;/h3&gt;&lt;p&gt;快捷键大家谁都知道一些，也都在用：&lt;/p&gt;

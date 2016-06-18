@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mac开启root用户 | Hauk&#39;s Blog</title>
+  <title>Mac安装protobuf简明教程 | Hauk&#39;s Blog</title>
   <meta name="author" content="Hauk.Zhu">
   
-  <meta name="description" content="虽然我们很少用到，但是我们要知道方法！">
+  <meta name="description" content="protobuf 是什么？ 请百度！本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！废话不多说，直接上步骤：
+###1. 下载 protobuf 的源码：
+1git clone https://github.com/google/protobuf.git">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Mac开启root用户"/>
+  <meta property="og:title" content="Mac安装protobuf简明教程"/>
   <meta property="og:site_name" content="Hauk&#39;s Blog"/>
 
   
@@ -103,7 +105,7 @@
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> Mac开启root用户</h1>
+			<h1 class="title title-inverse "> Mac安装protobuf简明教程</h1>
 		</div>		
 	
 
@@ -121,27 +123,40 @@
 
 	<!-- content -->
 	<div class="mypage">		
-	  
-		 <div class="alert alert-success description">
-			<i class="fa fa-info-circle"></i> <p>虽然我们很少用到，但是我们要知道方法！</p>
-			
-		 </div> <!-- alert -->
 	  		
 
-	  <ol>
-<li><p>从 Apple 菜单中选取系统偏好设置…。</p>
+	  <p>protobuf 是什么？ 请百度！<br>本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！<br>废话不多说，直接上步骤：</p>
+<p>###1. 下载 protobuf 的源码：</p>
+<pre><code><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/google/protobuf.git</span><br></pre></td></tr></table></figure>
+</code></pre><p>###2. 安装 必要的工具：automake 与 libtool：</p>
+<pre><code><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>automake  </span><br><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>libtool</span><br></pre></td></tr></table></figure>
+</code></pre><p>###3. 进入源码目录，Run autogen.sh</p>
+<pre><code><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./autogen.sh</span><br></pre></td></tr></table></figure>
+</code></pre><p>###4. 安装 protobuf ：</p>
+<pre><code><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ./configure  // --prefix=your path(指定安装路径)(可选)</span><br><span class="line">$ make<span class="built_in"> check </span> </span><br><span class="line">$ make  </span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+
+
+&gt; 默认安装到 /usr/local 目录下，若要自定义安装路径，执行configure时，指定--prefix=/usr/local/protobuf即可。例：    
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./configure --prefix=<span class="regexp">/usr/local</span><span class="regexp">/protobuf</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>###5. 环境变量的配置 </p>
+<pre><code> 如果你采取的是默认的安装路径，则不用特意的设置环境变量，终端里 直接运行 protoc 即可找到该命令。如果你采用了自定义的安装路径，那么最好配置一下环境变量，将它的bin和lib目录分别加入到PATH和LD_LIBRARY_PATH环境变量，以方便直接调用。要不然每次都要进入安装目录里 执行 protoc 命令，岂不是费时费力。
+
+ 如何配置环境变量，如下所示：
+ 编辑 /etc/profile 文件，在文件末尾追加 
+
+ <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	export PATH=<span class="variable">$PATH</span><span class="symbol">:/usr/local/protobuf/bin</span></span><br><span class="line">export LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/usr/local/protobuf/lib</span></span><br></pre></td></tr></table></figure>
+
+其中，/usr/local/protobuf 是你的自定义安装目录
+</code></pre><h3 id="注：安装过程中遇到的问题："><a href="#注：安装过程中遇到的问题：" class="headerlink" title="注：安装过程中遇到的问题："></a>注：安装过程中遇到的问题：</h3><ol>
+<li>步骤三 Run autogen.sh 的时候，一定要有梯子，科学上网你懂得</li>
+<li>步骤三 ./configure时，如果说没有权限，chmod +x configure</li>
+<li><p>步骤四 make check 的时候 可能会报错 fatal error: ‘tr1/tuple’ file not found，运行如下命令解决</p>
+ <figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">./configure CPPFLAGS</span>=<span class="string">-DGTEST_USE_OWN_TR1_TUPLE=1</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>从显示菜单中选取用户与群组。</p>
-</li>
-<li><p>点按锁图标并使用管理员帐户进行鉴定。</p>
-</li>
-<li><p>点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
- <a id="more"></a></li>
-<li>点按右下部的“编辑…”或“加入…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185813_aCYb_218940.png" alt="在此输入图片描述"></li>
-<li>点按“打开目录实用工具…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185853_HYBT_218940.png" alt="在此输入图片描述"></li>
-<li>点按“目录实用工具”窗口中的锁图标,输入管理员帐户名称和密码，然后点按“好”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185938_9nqs_218940.png" alt="在此输入图片描述"></li>
-<li>从编辑菜单中选取启用 Root 用户。<br><img src="http://static.oschina.net/uploads/space/2015/0512/190403_naFo_218940.jpg" alt="在此输入图片描述"></li>
-<li>在“密码”和“验证”字段中输入您想要使用的 root 密码，然后点按“好”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/190423_yBSg_218940.png" alt="在此输入图片描述"></li>
+</ol>
+<p><a href="https://github.com/google/protobuf/issues/51" target="_blank" rel="external">解决办法</a></p>
+<ol>
+<li>步骤五 配置环境变量的时候，/etc/profile 是一个只读文件，我是 找到 profile 文件，添加了写权限解决的。</li>
 </ol>
 	  
 	</div>
@@ -151,14 +166,14 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2016/06/18/MAC环境安装protobuf简明教程/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2016/03/16/Mac 开启root用户/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -197,7 +212,7 @@
   <h2 class="title">留言</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016/03/16/Mac 开启root用户/" data-title="Mac开启root用户" data-url="http://yoursite.com/2016/03/16/Mac 开启root用户/"></div>  
+  	 <div class="ds-thread" data-thread-key="2016/03/16/mac安装protobuf简明教程/" data-title="Mac安装protobuf简明教程" data-url="http://yoursite.com/2016/03/16/mac安装protobuf简明教程/"></div>  
   
 </section>
 
@@ -217,17 +232,6 @@
 
 	<!-- categories -->
     
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
-    <ul id="categorys" class="tag_box list-unstyled collapse in">
-          
-  <li>
-    <li><a href="/categories/Mac/">Mac<span>1</span></a></li>
-  </li>
-
-    </ul>
-	</div>
-	
 
 	<!-- tags -->
 	
@@ -235,18 +239,13 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/mac/">mac<span>2</span></a></li> <li><a href="/tags/root/">root<span>1</span></a></li>
+  <li><a href="/tags/mac/">mac<span>2</span></a></li> <li><a href="/tags/protobuf/">protobuf<span>1</span></a></li>
     </ul>
 	</div>
 		
 
 	<!-- toc -->
 	<div class="meta-widget">
-	
-	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
-	   <div id="toc" class="toc collapse in">
-			
-		</div>
 	
 	</div>
 	

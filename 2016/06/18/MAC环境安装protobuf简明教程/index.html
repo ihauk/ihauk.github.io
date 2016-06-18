@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hauk&#39;s Blog</title>
+  <title>MAC环境安装protobuf简明教程 | Hauk&#39;s Blog</title>
   <meta name="author" content="Hauk.Zhu">
+  
+  <meta name="description" content="protobuf 是什么？ 请百度！本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！废话不多说，直接上步骤：
+1. 下载 protobuf 的源码：1git clone https://github.com/google/protobuf.git
+2. ">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="MAC环境安装protobuf简明教程"/>
   <meta property="og:site_name" content="Hauk&#39;s Blog"/>
 
   
@@ -96,40 +100,32 @@
 
   <div class="container">
   	<div class="content">
-    	 <div class="page-header page-header-inverse ">
-  <h1 class="title title-inverse ">哆啦A浩：iOS 探路者</h1>
-</div>
+    	 
 
-<div class="row page">
 
 	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> MAC环境安装protobuf简明教程</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
 	<div class="col-md-9">
 	
 
-		<div class="slogan">
-      <i class="fa fa-heart"></i>
-      搞清楚 - 想透彻 - 做到位 - 讲明白
-</div>    
-		<div id="top_search"></div>
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-06-18 </div>
-			<div class="article-title"><a href="/2016/06/18/MAC环境安装protobuf简明教程/" >MAC环境安装protobuf简明教程</a></div>						
-		</h3>
-	
+	<!-- content -->
+	<div class="mypage">		
+	  		
 
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>protobuf 是什么？ 请百度！<br>本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！<br>废话不多说，直接上步骤：</p>
+	  <p>protobuf 是什么？ 请百度！<br>本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！<br>废话不多说，直接上步骤：</p>
 <h3 id="1-下载-protobuf-的源码："><a href="#1-下载-protobuf-的源码：" class="headerlink" title="1. 下载 protobuf 的源码："></a>1. 下载 protobuf 的源码：</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/google/protobuf.git</span><br></pre></td></tr></table></figure>
 <h3 id="2-安装-必要的工具：automake-与-libtool："><a href="#2-安装-必要的工具：automake-与-libtool：" class="headerlink" title="2. 安装 必要的工具：automake 与 libtool："></a>2. 安装 必要的工具：automake 与 libtool：</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>automake  </span><br><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>libtool</span><br></pre></td></tr></table></figure>
 <h3 id="3-进入源码目录，Run-autogen-sh"><a href="#3-进入源码目录，Run-autogen-sh" class="headerlink" title="3. 进入源码目录，Run autogen.sh"></a>3. 进入源码目录，Run autogen.sh</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./autogen.sh</span><br></pre></td></tr></table></figure>
@@ -150,175 +146,119 @@
 <li><p>步骤五 配置环境变量的时候，/etc/profile 是一个只读文件，我是 找到 profile 文件，添加了写权限解决的。</p>
 </li>
 </ol>
-
-	
+	  
 	</div>
-  <a type="button" href="/2016/06/18/MAC环境安装protobuf简明教程/#more" class="btn btn-default more">阅读此文</a>
-</div>
 
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-03-16 </div>
-			<div class="article-title"><a href="/2016/03/16/Mac 开启root用户/" title="虽然我们很少用到，但是我们要知道方法！">Mac开启root用户</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<ol>
-<li><p>从 Apple 菜单中选取系统偏好设置…。</p>
-</li>
-<li><p>从显示菜单中选取用户与群组。</p>
-</li>
-<li><p>点按锁图标并使用管理员帐户进行鉴定。</p>
-</li>
-<li><p>点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
-	
-	</div>
-  <a type="button" href="/2016/03/16/Mac 开启root用户/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-12-10 </div>
-			<div class="article-title"><a href="/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/" title="掌握快捷键，效率提升半边天.">xcode键盘君的常用快捷键及设置</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-           
-              <div class="thumbnail"><a href="/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/"><img src="img/键盘俏天下.jpg" alt="xcode键盘君的常用快捷键及设置"  class="nofancybox"></a>
-           
-		</div>
-	
-	
-		<p>这是一篇神奇的文章，在这里你会了解常用快捷键，更会学会一些超便捷的装b技能.不用犹豫，保证学有所值！我将为你节省时间，为了你的诗和远方~</p>
-<h3 id="一、常用快捷键"><a href="#一、常用快捷键" class="headerlink" title="一、常用快捷键"></a>一、常用快捷键</h3><p>快捷键大家谁都知道一些，也都在用：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 编译 app ：<span class="built_in">CMD</span> + B </span><br><span class="line"><span class="number">2</span>. 运行程序 ：<span class="built_in">CMD</span> + R </span><br><span class="line"><span class="number">3</span>. 清楚缓存 ：<span class="built_in">CMD</span> + <span class="built_in">SHIFT</span> + K </span><br><span class="line"><span class="number">4</span>. 在文件中查找 ： <span class="built_in">CMD</span> + F </span><br><span class="line"><span class="number">5</span>. 全局搜索 ：<span class="built_in">CMD</span> + <span class="built_in">SHIFT</span> + F </span><br><span class="line"><span class="number">6</span>. 开启/关闭 断点调试 ：<span class="built_in">CMD</span> + Y</span><br></pre></td></tr></table></figure>
-	
-	</div>
-  <a type="button" href="/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
+	<div>
+  	<center>
+	<div class="pagination">
 <ul class="pagination">
 	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/03/16/Mac 开启root用户/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
 </ul>
 </div>
 
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
-
-		
-			
-	<div class="widget">
-		<h4>分类</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/Mac/">Mac<span>1</span></a></li>
-		
-			<li><a href="/categories/iOS/">iOS<span>1</span></a></li>
-		
-		</ul>
+    </center>
 	</div>
 
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+  	 <div class="ds-thread" data-thread-key="2016/06/18/MAC环境安装protobuf简明教程/" data-title="MAC环境安装protobuf简明教程" data-url="http://yoursite.com/2016/06/18/MAC环境安装protobuf简明教程/"></div>  
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-	<div class="widget">
-		<h4>标签云</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/root/">root<span>1</span></a></li>
-		
-			<li><a href="/tags/快捷键/">快捷键<span>1</span></a></li>
-		
-			<li><a href="/tags/protobuf/">protobuf<span>1</span></a></li>
-		
-			<li><a href="/tags/mac/">mac<span>2</span></a></li>
-		
-		 
-		</ul>
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-06-18 
 	</div>
+	
 
+	<!-- categories -->
+    
 
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/mac/">mac<span>2</span></a></li> <li><a href="/tags/protobuf/">protobuf<span>1</span></a></li>
+    </ul>
+	</div>
 		
-			
-<div class="widget">
-  <h4>最新文章</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2016/06/18/MAC环境安装protobuf简明教程/" ><i class="fa fa-file-o"></i>MAC环境安装protobuf简明教程</a>
-      </li>
-    
-      <li>
-        <a href="/2016/03/16/Mac 开启root用户/"  title="虽然我们很少用到，但是我们要知道方法！" ><i class="fa fa-file-o"></i>Mac开启root用户</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/10/【工具篇】xcode键盘君的常用快捷键及设置/"  title="掌握快捷键，效率提升半边天." ><i class="fa fa-file-o"></i>xcode键盘君的常用快捷键及设置</a>
-      </li>
-    
-  </ul>
-</div>
 
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
 		
-			
-<div class="widget">
-	<h4>链接</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="http://skyming.me/" title="Skyming." target="_blank"]);">Skyming</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://my.oschina.net/izhuhaodev" title="My OSChina account." target="_blank"]);">My OSChina</a></li>
-	
-	</ul>
-</div>
+
+</div><!-- row -->
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'hauk-dev' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
 
 
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
-
-	
-	
-</div> <!-- row-fluid -->
 
 	</div>
   </div>
