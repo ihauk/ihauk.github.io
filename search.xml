@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2018/10/26/hello-world/"/>
+      <url>/2018/10/26/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>IM</title>
+      <link href="/2016/11/28/IM/"/>
+      <url>/2016/11/28/IM/</url>
+      
+        <content type="html"><![CDATA[<h2 id="WebRTC相关"><a href="#WebRTC相关" class="headerlink" title="WebRTC相关"></a>WebRTC相关</h2><ul><li>webrtc 源码分析<br><a href="http://blog.csdn.net/kenny_zh/article/category/2487849" target="_blank" rel="noopener">http://blog.csdn.net/kenny_zh/article/category/2487849</a></li></ul><p><a href="http://feixiao.github.io/2015/07/02/webrtc_2/" target="_blank" rel="noopener">http://feixiao.github.io/2015/07/02/webrtc_2/</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>MAC环境安装protobuf简明教程</title>
+      <link href="/2016/06/18/MAC%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85protobuf%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
+      <url>/2016/06/18/MAC%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85protobuf%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>protobuf 是什么？ 请百度！<br>本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！<br>废话不多说，直接上步骤：</p><h3 id="1-下载-protobuf-的源码："><a href="#1-下载-protobuf-的源码：" class="headerlink" title="1. 下载 protobuf 的源码："></a>1. 下载 protobuf 的源码：</h3><pre><code>git clone https://github.com/google/protobuf.git  </code></pre><h3 id="2-安装-必要的工具：automake-与-libtool："><a href="#2-安装-必要的工具：automake-与-libtool：" class="headerlink" title="2. 安装 必要的工具：automake 与 libtool："></a>2. 安装 必要的工具：automake 与 libtool：</h3><pre><code>$ brew install automake  $ brew install libtool  </code></pre><h3 id="3-进入源码目录，Run-autogen-sh"><a href="#3-进入源码目录，Run-autogen-sh" class="headerlink" title="3. 进入源码目录，Run autogen.sh"></a>3. 进入源码目录，Run autogen.sh</h3><pre><code>$ ./autogen.sh </code></pre><h3 id="4-安装-protobuf-："><a href="#4-安装-protobuf-：" class="headerlink" title="4. 安装 protobuf ："></a>4. 安装 protobuf ：</h3><pre><code>$ ./configure  // --prefix=your path(指定安装路径)(可选) $ make check  $ make  $ make install  </code></pre><blockquote><p>默认安装到 /usr/local 目录下，若要自定义安装路径，执行configure时，指定–prefix=/usr/local/protobuf即可。例：    </p><pre><code>$ ./configure --prefix=/usr/local/protobuf</code></pre></blockquote><h3 id="5-环境变量的配置"><a href="#5-环境变量的配置" class="headerlink" title="5. 环境变量的配置"></a>5. 环境变量的配置</h3><p>如果你采取的是默认的安装路径，则不用特意的设置环境变量，终端里 直接运行 protoc 即可找到该命令。如果你采用了自定义的安装路径，那么最好配置一下环境变量，将它的bin和lib目录分别加入到PATH和LD_LIBRARY_PATH环境变量，以方便直接调用。要不然每次都要进入安装目录里 执行 protoc 命令，岂不是费时费力。</p><p>如何配置环境变量，如下所示：<br>编辑 /etc/profile 文件，在文件末尾追加 </p><pre><code>export PATH=$PATH:/usr/local/protobuf/binexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/protobuf/lib</code></pre><p>其中，/usr/local/protobuf 是你的自定义安装目录</p><h3 id="注：安装过程中遇到的问题："><a href="#注：安装过程中遇到的问题：" class="headerlink" title="注：安装过程中遇到的问题："></a>注：安装过程中遇到的问题：</h3><ol><li>步骤三 Run autogen.sh 的时候，一定要有梯子，科学上网你懂得</li><li>步骤三 ./configure时，如果说没有权限，chmod +x configure</li><li><p>步骤四 make check 的时候 可能会报错 fatal error: ‘tr1/tuple’ file not found，运行如下命令解决 <a href="https://github.com/google/protobuf/issues/51" target="_blank" rel="noopener">解决办法</a>在这里，终端运行如下命令</p><pre><code>./configure CPPFLAGS=-DGTEST_USE_OWN_TR1_TUPLE=1 </code></pre></li><li><p>步骤五 配置环境变量的时候，/etc/profile 是一个只读文件，我是 找到 profile 文件，添加了写权限解决的。</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mac </tag>
+            
+            <tag> protobuf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Mac开启root用户</title>
+      <link href="/2016/03/16/Mac%20%E5%BC%80%E5%90%AFroot%E7%94%A8%E6%88%B7/"/>
+      <url>/2016/03/16/Mac%20%E5%BC%80%E5%90%AFroot%E7%94%A8%E6%88%B7/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>从 Apple 菜单中选取系统偏好设置…。</p></li><li><p>从显示菜单中选取用户与群组。</p></li><li><p>点按锁图标并使用管理员帐户进行鉴定。</p></li><li><p>点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p> <a id="more"></a></li><li>点按右下部的“编辑…”或“加入…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185813_aCYb_218940.png" alt="在此输入图片描述"></li><li>点按“打开目录实用工具…”按钮。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185853_HYBT_218940.png" alt="在此输入图片描述"></li><li>点按“目录实用工具”窗口中的锁图标,输入管理员帐户名称和密码，然后点按“好”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185938_9nqs_218940.png" alt="在此输入图片描述"></li><li>从编辑菜单中选取启用 Root 用户。<br><img src="http://static.oschina.net/uploads/space/2015/0512/190403_naFo_218940.jpg" alt="在此输入图片描述"></li><li>在“密码”和“验证”字段中输入您想要使用的 root 密码，然后点按“好”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/190423_yBSg_218940.png" alt="在此输入图片描述"></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Mac </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mac </tag>
+            
+            <tag> root </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>xcode键盘君的常用快捷键及设置</title>
+      <link href="/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
+      <url>/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>这是一篇神奇的文章，在这里你会了解常用快捷键，更会学会一些超便捷的装b技能.不用犹豫，保证学有所值！我将为你节省时间，为了你的诗和远方~</p><h3 id="一、常用快捷键"><a href="#一、常用快捷键" class="headerlink" title="一、常用快捷键"></a>一、常用快捷键</h3><p>快捷键大家谁都知道一些，也都在用：</p><pre><code>    1. 编译 app ：CMD + B     2. 运行程序 ：CMD + R     3. 清楚缓存 ：CMD + SHIFT + K     4. 在文件中查找 ： CMD + F     5. 全局搜索 ：CMD + SHIFT + F     6. 开启/关闭 断点调试 ：CMD + Y </code></pre><a id="more"></a><p>看到这里，你就可能觉得无聊，这些都是最常用不过的了，您别急，如果您对以上的这些快捷键都了然于胸，那么直接进入下一个章节吧。</p><h3 id="二、工作流快捷键"><a href="#二、工作流快捷键" class="headerlink" title="二、工作流快捷键"></a>二、工作流快捷键</h3><p>&emsp;大家使用快捷键的目地是啥，不就是为了提高工作效率么，顺便彰显一下我们牛逼的人生么，可是仅仅上面那些好像又显得很low，谁都会，那么如何优化自己的工作流，让自己与众不同呢？下面看看我是如何使用快捷键提升效率的吧，以下仅是抛砖引玉，希望能与大家多多互动交流。</p><pre><code>    1. CMD + SHIFT + O ：快速找到目标文件 (支持模糊搜索哦)    2. CMD + SHIFT + J ：快速定位，当前文件在xCode导航区的位置    3. Ctrl + 6 ：打开 .m 的方法列表，可以上下移动方向键，定位到目标method，然后回车，可以在调出方法列表的时候，输入目标函数的名字，也就是说 在这里的方法列表里是支持搜索的。不过 个人习惯，我已经在preference 中 把这个修改为 CMD + SHIFT + D。    4. 现在该编辑文件了，如果您用的 macbook，可能您觉得文件编辑区域有点小（一般在公司会外接显示器，这样这些快捷键可能就用处不打了），那么请敲 CMD + 0 ，隐藏左侧导航区（再次敲击 显示），敲 OPT + CMD + 0 ，隐藏 右侧工具区（再次敲击 显示），CMD + SHIFT + Y ，隐藏底部控制台（再次敲击 显示）     5.编辑文件时，您想 切换 .h 和 .m 文件 ，那么请 敲 CTRL + CMD + ↑ / ↓    6. CMD +  ↑ / ↓ : 快速回到文件 顶部/底部    7. OPT + CMD + ←/→ : 收起/展开 光标所在的方法代码块    8. OPT + CMD + [/] : 将光标所在代码行 上移/下移（与上一行代码交换/ 与下一行交换），    9. 快速删除一行代码： CMD + ← ，将光标移动到行头，CTRL + K 删除该行代码    10. 如果您正在编辑storyboard ，想往上拖控件的时候，请敲 CTRL + OPT + CMD + 3，快速进入右侧工具区底部的控件区域    </code></pre><p>如果您对vim有了解，并且习惯使用，那么建议您安装 xvim 插件，详情请百度or google如果这些您都掌握了。那么请藐视我吧，您就全当放松吧。</p><blockquote><p>PS.连个配图都没有，真是low，哈哈告诉您我是故意没有配图的，只有您亲自尝试过了，您才会记忆深刻，才会体会键盘君的工作流的“精髓”。（说白了，主要是我懒 ^_^）</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快捷键 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
