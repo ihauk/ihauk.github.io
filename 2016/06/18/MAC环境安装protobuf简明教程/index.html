@@ -5,8 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hauk&#39;s Blog">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="MAC环境安装protobuf简明教程, Hauk&#39;s Blog">
+    <meta name="description" content="protobuf 是什么？ 请百度！本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！废话不多说，直接上步骤：
+1. 下载 protobuf 的源码：1git clone https://gith">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hauk&#39;s Blog</title>
+    <title>MAC环境安装protobuf简明教程 | Hauk&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -245,13 +246,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        MAC环境安装protobuf简明教程
                     </div>
                 </div>
             </div>
@@ -269,26 +270,50 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/mac/" target="_blank">
+                    <span class="chip bg-color">mac</span>
+                </a>
+                
+                <a href="/tags/protobuf/" target="_blank">
+                    <span class="chip bg-color">protobuf</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-26
+                    <i class="fa fa-clock-o fa-fw"></i>2016-06-18
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>protobuf 是什么？ 请百度！<br>本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！<br>废话不多说，直接上步骤：</p>
+<h3 id="1-下载-protobuf-的源码："><a href="#1-下载-protobuf-的源码：" class="headerlink" title="1. 下载 protobuf 的源码："></a>1. 下载 protobuf 的源码：</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/google/protobuf.git</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装-必要的工具：automake-与-libtool："><a href="#2-安装-必要的工具：automake-与-libtool：" class="headerlink" title="2. 安装 必要的工具：automake 与 libtool："></a>2. 安装 必要的工具：automake 与 libtool：</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>automake  </span><br><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>libtool</span><br></pre></td></tr></table></figure>
+<h3 id="3-进入源码目录，Run-autogen-sh"><a href="#3-进入源码目录，Run-autogen-sh" class="headerlink" title="3. 进入源码目录，Run autogen.sh"></a>3. 进入源码目录，Run autogen.sh</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./autogen.sh</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装-protobuf-："><a href="#4-安装-protobuf-：" class="headerlink" title="4. 安装 protobuf ："></a>4. 安装 protobuf ：</h3><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ./configure  // --prefix=your path(指定安装路径)(可选) </span><br><span class="line">$ make<span class="built_in"> check </span> </span><br><span class="line">$ make  </span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认安装到 /usr/local 目录下，若要自定义安装路径，执行configure时，指定–prefix=/usr/local/protobuf即可。例：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .<span class="regexp">/configure --prefix=/u</span>sr<span class="regexp">/local/</span>protobuf</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="5-环境变量的配置"><a href="#5-环境变量的配置" class="headerlink" title="5. 环境变量的配置"></a>5. 环境变量的配置</h3><p>如果你采取的是默认的安装路径，则不用特意的设置环境变量，终端里 直接运行 protoc 即可找到该命令。如果你采用了自定义的安装路径，那么最好配置一下环境变量，将它的bin和lib目录分别加入到PATH和LD_LIBRARY_PATH环境变量，以方便直接调用。要不然每次都要进入安装目录里 执行 protoc 命令，岂不是费时费力。</p>
+<p>如何配置环境变量，如下所示：<br>编辑 /etc/profile 文件，在文件末尾追加 </p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PATH=<span class="variable">$PATH</span><span class="symbol">:/usr/local/protobuf/bin</span></span><br><span class="line">export LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/usr/local/protobuf/lib</span></span><br></pre></td></tr></table></figure>
+<p>其中，/usr/local/protobuf 是你的自定义安装目录</p>
+<h3 id="注：安装过程中遇到的问题："><a href="#注：安装过程中遇到的问题：" class="headerlink" title="注：安装过程中遇到的问题："></a>注：安装过程中遇到的问题：</h3><ol>
+<li>步骤三 Run autogen.sh 的时候，一定要有梯子，科学上网你懂得</li>
+<li>步骤三 ./configure时，如果说没有权限，chmod +x configure</li>
+<li><p>步骤四 make check 的时候 可能会报错 fatal error: ‘tr1/tuple’ file not found，运行如下命令解决 <a href="https://github.com/google/protobuf/issues/51" target="_blank" rel="noopener">解决办法</a>在这里，终端运行如下命令</p>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure <span class="attribute">CPPFLAGS</span>=-DGTEST_USE_OWN_TR1_TUPLE=1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>步骤五 配置环境变量的时候，/etc/profile 是一个只读文件，我是 找到 profile 文件，添加了写权限解决的。</p>
+</li>
+</ol>
 
             </div>
             <hr>
@@ -427,7 +452,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://yoursite.com" class="b-link-green">Hauk's Blog</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/26/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2016/06/18/MAC环境安装protobuf简明教程/" class="b-link-green">MAC环境安装protobuf简明教程</a>
                 </p>
             </div>
         </div>
@@ -447,39 +472,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">本篇</div>
-            <div class="card">
-                <a href="/2018/10/26/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            Hauk.Zhu
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
                 <a href="/2016/11/28/IM/">
                     <div class="card-image">
@@ -496,9 +489,9 @@ webrtc 源码分析http://blog.csdn.net/kenny_zh/article/category/2487849
 
 http://feixiao.github.io/2015/07/02/webrtc_2</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-11-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2016-11-28
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -506,6 +499,64 @@ http://feixiao.github.io/2015/07/02/webrtc_2</div>
                             
                         </span>
                     </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/2016/03/16/Mac 开启root用户/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Mac开启root用户">
+                        
+                        <span class="card-title">Mac开启root用户</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+从 Apple 菜单中选取系统偏好设置…。
+
+从显示菜单中选取用户与群组。
+
+点按锁图标并使用管理员帐户进行鉴定。
+
+点按“登录选项…”。
+ 
+点按右下部的“编辑…”或“加入…”按钮。
+点按“打开目录实用工具…”按钮。
+点按“目录实用工具</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-03-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Mac/" class="post-category" target="_blank">
+                                    Mac
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mac/" target="_blank">
+                        <span class="chip bg-color">mac</span>
+                    </a>
+                    
+                    <a href="/tags/root/" target="_blank">
+                        <span class="chip bg-color">root</span>
+                    </a>
+                    
                 </div>
                 
             </div>
