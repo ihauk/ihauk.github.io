@@ -3,6 +3,17 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/"/>
+      <url>/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="常用快捷键总结"><a href="#常用快捷键总结" class="headerlink" title="常用快捷键总结"></a>常用快捷键总结</h1><table><thead><tr><th>快捷键</th><th>功能说明</th><th>备注</th></tr></thead><tbody><tr><td>ctrl + e</td><td>打开最近使用过的文件</td></tr><tr><td>ctrl + q</td><td>显示选中函数的声明以及注释内容</td></tr><tr><td>alt  + q</td><td>查看当前光标所在方法的名称</td></tr><tr><td>ctrl + x</td><td>删除当前光标所在行</td></tr><tr><td>ctrl + d</td><td>复制当前光标所在行</td></tr><tr><td>ctrl + f</td><td>文件内搜索</td></tr><tr><td>ctrl + g</td><td>快速定位到某行</td></tr><tr><td>ctrl + shift + i</td><td>显示函数内容</td></tr><tr><td>shift + ctrl + p</td><td>显示变量的数据类型</td></tr><tr><td>ctrl + w</td><td>智能选中</td></tr><tr><td>ctrl + b</td><td>快速打开光标处的结构体或方法（跳转到定义处）</td></tr><tr><td>ctrl +N</td><td>可以跳转到 输入的结构体 </td></tr><tr><td>ctrl + shift + n</td><td>可以快速打开输入的文件</td></tr><tr><td>ctrl + j</td><td>调用 live templete，可快速输入代码块</td></tr><tr><td>ctrl + +/-</td><td>可以将当前方法进行展开或折叠</td></tr><tr><td>ctrl + alt + v</td><td>生成表达式返回值</td><td>表达式末尾使用。先不要写 “resp, err :=”，按下快捷键后会自动生成。</td></tr><tr><td>shift + ctrl + a</td><td>打开快速导航功能命令输入框</td></tr><tr><td>ctrl + shift + f</td><td>全局搜索</td></tr><tr><td>双击shift</td><td>打开智能搜索框：可搜索文件名、类名、包名和最近打开的文件</td></tr></tbody></table><blockquote><p>效果图请自行脑补，实践出真知</p></blockquote><h1 id="golang-2-3-激活方法"><a href="#golang-2-3-激活方法" class="headerlink" title="golang 2.3 激活方法"></a>golang 2.3 激活方法</h1><ol><li>在host 文件中添加如下 配置<pre><code>0.0.0.0 account.jetbrains.com</code></pre></li><li>访问 <a href="http://idea.lanyus.com" target="_blank" rel="noopener">http://idea.lanyus.com</a><br>点击或者注册码，将生成的注册码 粘贴到 goland中去，ok搞定</li></ol><blockquote><p>参考链接： <a href="https://blog.csdn.net/ouzhuangzhuang/article/details/81518525" target="_blank" rel="noopener">https://blog.csdn.net/ouzhuangzhuang/article/details/81518525</a></p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2018/11/01/hello-world/"/>
       <url>/2018/11/01/hello-world/</url>
@@ -70,8 +81,8 @@
     
     <entry>
       <title>xcode键盘君的常用快捷键及设置</title>
-      <link href="/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
-      <url>/2015/12/10/%E3%80%90%E5%B7%A5%E5%85%B7%E7%AF%87%E3%80%91xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/</url>
+      <link href="/2015/12/10/xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/"/>
+      <url>/2015/12/10/xcode%E9%94%AE%E7%9B%98%E5%90%9B%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E8%AE%BE%E7%BD%AE/</url>
       
         <content type="html"><![CDATA[<p>这是一篇神奇的文章，在这里你会了解常用快捷键，更会学会一些超便捷的装b技能.不用犹豫，保证学有所值！我将为你节省时间，为了你的诗和远方~</p><h3 id="一、常用快捷键"><a href="#一、常用快捷键" class="headerlink" title="一、常用快捷键"></a>一、常用快捷键</h3><p>快捷键大家谁都知道一些，也都在用：</p><pre><code>    1. 编译 app ：CMD + B     2. 运行程序 ：CMD + R     3. 清楚缓存 ：CMD + SHIFT + K     4. 在文件中查找 ： CMD + F     5. 全局搜索 ：CMD + SHIFT + F     6. 开启/关闭 断点调试 ：CMD + Y </code></pre><a id="more"></a><p>看到这里，你就可能觉得无聊，这些都是最常用不过的了，您别急，如果您对以上的这些快捷键都了然于胸，那么直接进入下一个章节吧。</p><h3 id="二、工作流快捷键"><a href="#二、工作流快捷键" class="headerlink" title="二、工作流快捷键"></a>二、工作流快捷键</h3><p>&emsp;大家使用快捷键的目地是啥，不就是为了提高工作效率么，顺便彰显一下我们牛逼的人生么，可是仅仅上面那些好像又显得很low，谁都会，那么如何优化自己的工作流，让自己与众不同呢？下面看看我是如何使用快捷键提升效率的吧，以下仅是抛砖引玉，希望能与大家多多互动交流。</p><pre><code>    1. CMD + SHIFT + O ：快速找到目标文件 (支持模糊搜索哦)    2. CMD + SHIFT + J ：快速定位，当前文件在xCode导航区的位置    3. Ctrl + 6 ：打开 .m 的方法列表，可以上下移动方向键，定位到目标method，然后回车，可以在调出方法列表的时候，输入目标函数的名字，也就是说 在这里的方法列表里是支持搜索的。不过 个人习惯，我已经在preference 中 把这个修改为 CMD + SHIFT + D。    4. 现在该编辑文件了，如果您用的 macbook，可能您觉得文件编辑区域有点小（一般在公司会外接显示器，这样这些快捷键可能就用处不打了），那么请敲 CMD + 0 ，隐藏左侧导航区（再次敲击 显示），敲 OPT + CMD + 0 ，隐藏 右侧工具区（再次敲击 显示），CMD + SHIFT + Y ，隐藏底部控制台（再次敲击 显示）     5.编辑文件时，您想 切换 .h 和 .m 文件 ，那么请 敲 CTRL + CMD + ↑ / ↓    6. CMD +  ↑ / ↓ : 快速回到文件 顶部/底部    7. OPT + CMD + ←/→ : 收起/展开 光标所在的方法代码块    8. OPT + CMD + [/] : 将光标所在代码行 上移/下移（与上一行代码交换/ 与下一行交换），    9. 快速删除一行代码： CMD + ← ，将光标移动到行头，CTRL + K 删除该行代码    10. 如果您正在编辑storyboard ，想往上拖控件的时候，请敲 CTRL + OPT + CMD + 3，快速进入右侧工具区底部的控件区域    </code></pre><p>如果您对vim有了解，并且习惯使用，那么建议您安装 xvim 插件，详情请百度or google如果这些您都掌握了。那么请藐视我吧，您就全当放松吧。</p><blockquote><p>PS.连个配图都没有，真是low，哈哈告诉您我是故意没有配图的，只有您亲自尝试过了，您才会记忆深刻，才会体会键盘君的工作流的“精髓”。（说白了，主要是我懒 ^_^）</p></blockquote>]]></content>
       
