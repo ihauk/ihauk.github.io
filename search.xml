@@ -3,17 +3,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB.resource/commit/"/>
-      <url>/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB.resource/commit/</url>
-      
-        <content type="html"><![CDATA[{"compress":true,"commitItems":[["e6840b20-116a-49b1-b7c5-49365645f35c",1543566852116,"---\ntitle: goland 常用快捷键与激活\n---\n# 常用快捷键总结\n\n快捷键 | 功能说明 | 备注 |\n---|--- |---\nctrl + e | 打开最近使用过的文件 |\nctrl + q | 显示选中函数的声明以及注释内容 |\nalt  + q | 查看当前光标所在方法的名称 |\nctrl + x | 删除当前光标所在行|\nctrl + d | 复制当前光标所在行|\nctrl + f | 文件内搜索|\nctrl + g | 快速定位到某行|\nctrl + shift + i | 显示函数内容|\nshift + ctrl + p | 显示变量的数据类型|\nctrl + w | 智能选中|\nctrl + b | 快速打开光标处的结构体或方法（跳转到定义处）|\nctrl +N | 可以跳转到 输入的结构体 |\nctrl + shift + n |可以快速打开输入的文件|\nctrl + j | 调用 live templete，可快速输入代码块|\nctrl + +/- | 可以将当前方法进行展开或折叠|\nctrl + alt + v | 生成表达式返回值 |表达式末尾使用。先不要写 \"resp, err :=\"，按下快捷键后会自动生成。\nshift + ctrl + a | 打开快速导航功能命令输入框|\nctrl + shift + f | 全局搜索|\n双击shift | 打开智能搜索框：可搜索文件名、类名、包名和最近打开的文件\n\n> 效果图请自行脑补，实践出真知\n\n\n# golang 2.3 激活方法\n1. 在host 文件中添加如下 配置\n```\n0.0.0.0 account.jetbrains.com\n```\n2. 访问 http://idea.lanyus.com   \n点击或者注册码，将生成的注册码 粘贴到 goland中去，ok搞定\n\n\n> 参考链接： https://blog.csdn.net/ouzhuangzhuang/article/details/81518525",[[1543566850608,["zhuhao211054@zhuhao211054",[[1,27,"\n"]],[26,26],[27,27]]],[1543566850864,["zhuhao211054@zhuhao211054",[[1,27,"tags: [mac,root]"]],[27,27],[43,43]]],[1543566857762,["zhuhao211054@zhuhao211054",[[-1,34,"mac"],[1,37,"goland"]],[34,37],[40,40]]],[1543566863923,["zhuhao211054@zhuhao211054",[[-1,41,"root"],[1,45,"快捷键"]],[41,45],[44,44]]],[1543566890944,["zhuhao211054@zhuhao211054",[[1,46,"\n"]],[45,45],[46,46]]],[1543566891176,["zhuhao211054@zhuhao211054",[[1,46,"categories: Mac\n \ntags: [mac,root]\n\ndescription: 虽然我们很少用到，但是我们要知道方法！"]],[46,46],[114,114]]],[1543566893952,["zhuhao211054@zhuhao211054",[[-1,64,"tags: [mac,root]"]],[64,80],[64,64]]],[1543566894312,["zhuhao211054@zhuhao211054",[[-1,65,"\n"]],[64,64],[63,63]]],[1543566894776,["zhuhao211054@zhuhao211054",[[-1,62," "]],[63,63],[62,62]]],[1543566895840,["zhuhao211054@zhuhao211054",[[-1,63,"\n"]],[62,62],[62,62]]],[1543566896361,["zhuhao211054@zhuhao211054",[[-1,62,"\n"]],[62,62],[62,62]]],[1543566903005,["zhuhao211054@zhuhao211054",[[-1,58,"Mac"],[1,61,"go"]],[58,61],[60,60]]],[1543566923599,["zhuhao211054@zhuhao211054",[[-1,74,"虽然我们很少用到，但是我们要知道方法！"],[1,93,"工欲善其事必先利其器"]],[74,93],[84,84]]],[1543566927463,["zhuhao211054@zhuhao211054",[[1,79,"，"]],[79,79],[80,80]]]]]]}]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
       <title>goland 常用快捷键与激活</title>
       <link href="/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/"/>
       <url>/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
