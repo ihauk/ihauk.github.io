@@ -3,17 +3,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2018/12/04/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB.resource/commit/"/>
-      <url>/2018/12/04/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB.resource/commit/</url>
-      
-        <content type="html"><![CDATA[{"compress":true,"commitItems":[["0b91660c-7097-4b2c-9bc2-0d057a896f2e",1543916694609,"---\ntitle: goland 常用快捷键与激活\ntags: [goland,快捷键]\ncategories: go\ndescription: 工欲善其事，必先利其器\n---\n# 常用快捷键总结\n\n快捷键 | 功能说明 | 备注 |\n---|--- |---\nctrl + e | 打开最近使用过的文件 |\nctrl + q | 显示选中函数的声明以及注释内容 |\nalt  + q | 查看当前光标所在方法的名称 |\nctrl + x | 删除当前光标所在行|\nctrl + d | 复制当前光标所在行|\nctrl + f | 文件内搜索|\nctrl + g | 快速定位到某行|\nctrl + shift + i | 显示函数内容|\nshift + ctrl + p | 显示变量的数据类型|\nctrl + w | 智能选中|\nctrl + b | 快速打开光标处的结构体或方法（跳转到定义处）|\nctrl +N | 可以跳转到 输入的结构体 |\nctrl + shift + n |可以快速打开输入的文件|\nctrl + j | 调用 live templete，可快速输入代码块|\nctrl + +/- | 可以将当前方法进行展开或折叠|\nctrl + alt + v | 生成表达式返回值 |表达式末尾使用。先不要写 \"resp, err :=\"，按下快捷键后会自动生成。\nshift + ctrl + a | 打开快速导航功能命令输入框|\nctrl + shift + f | 全局搜索|\n双击shift | 打开智能搜索框：可搜索文件名、类名、包名和最近打开的文件\n\n> 效果图请自行脑补，实践出真知\n\n\n# golang 2.3 激活方法\n1. 在host 文件中添加如下 配置\n```\n0.0.0.0 account.jetbrains.com\n```\n2. 访问 http://idea.lanyus.com   \n点击或者注册码，将生成的注册码 粘贴到 goland中去，ok搞定\n\n\n> 参考链接： https://blog.csdn.net/ouzhuangzhuang/article/details/81518525",[[1543916693934,["zhuhao211054@zhuhao211054",[[1,90,"\n"],[1,101,"如下列表为 windows 系统上的常用快捷键\n\n"],[1,294,"ctrl + h | 显示当前struct的层次结构|\nctrl + i | 选中struct后按下，选择要实现的interface|\nctrl + F12 | 选中struct后按下，选择要实现的interface|\n"],[-1,409,"N"],[1,410," n"],[-1,693,""],[1,709,"\n\n个人感觉以上快捷键已足够使用,若需要了解更多的快捷键，请 按下 Ctrl + alt + s ，调出设置页面，找到 keymap ，然后查看 Editor actions"]],[0,925],[1149,1149]]]]]]}]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
       <title>goland 常用快捷键与激活</title>
       <link href="/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/"/>
       <url>/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
