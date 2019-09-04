@@ -3,6 +3,140 @@
   
     
     <entry>
+      <title>centos安装teamviewer概述</title>
+      <link href="/2019/08/17/centos%20server%20%E5%AE%89%E8%A3%85%20teamviewer%20%E9%97%AE%E9%A2%98%E6%8E%A2%E7%B4%A2/"/>
+      <url>/2019/08/17/centos%20server%20%E5%AE%89%E8%A3%85%20teamviewer%20%E9%97%AE%E9%A2%98%E6%8E%A2%E7%B4%A2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="历史版本安装连接"><a href="#历史版本安装连接" class="headerlink" title="历史版本安装连接"></a>历史版本安装连接</h3><p><a href="https://community.teamviewer.com/t5/TeamViewer-Knowledge-Base-ZH/%E6%88%91%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%93%AA%E9%87%8C%E4%B8%8B%E8%BD%BD-TeamViewer-%E6%97%A7%E7%89%88%E6%9C%AC/ta-p/33695" target="_blank" rel="noopener">https://community.teamviewer.com/t5/TeamViewer-Knowledge-Base-ZH/%E6%88%91%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%93%AA%E9%87%8C%E4%B8%8B%E8%BD%BD-TeamViewer-%E6%97%A7%E7%89%88%E6%9C%AC/ta-p/33695</a></p><h3 id="安装rpm文件"><a href="#安装rpm文件" class="headerlink" title="安装rpm文件"></a>安装rpm文件</h3><pre><code>1、rpm -ivh teamviewer-host_13.2.75536.x86_64.rpm      //需要自己安装依赖2、yum install teamviewer-host_13.2.75536.x86_64.rpm   //建议用此命令，会自动安装依赖</code></pre><h3 id="控制teamviewer服务"><a href="#控制teamviewer服务" class="headerlink" title="控制teamviewer服务"></a>控制teamviewer服务</h3><pre><code>systemctl [start|status|stop|disable|enable] teamviewerd</code></pre><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code>//查看teamview信息$ teamviewer --info TeamViewer                           13.2.75536  (RPM) TeamViewer ID:                        1315674770 teamviewerd status                   ● teamviewerd.service - TeamViewer remote control daemon   Loaded: loaded (/etc/systemd/system/teamviewerd.service; enabled; vendor preset: disabled)   Active: active (running) since Thu 2019-06-27 05:11:13 EDT; 21min ago  Process: 5796 ExecStart=/opt/teamviewer/tv_bin/teamviewerd -d (code=exited, status=0/SUCCESS) Main PID: 5798 (teamviewerd)   Memory: 6.1M   CGroup: /system.slice/teamviewerd.service           └─5798 /opt/teamviewer/tv_bin/teamviewerd -dJun 27 05:11:13 localhost.localdomain systemd[1]: Starting TeamViewer remote control daemon...Jun 27 05:11:13 localhost.localdomain systemd[1]: PID file /var/run/teamviewerd.pid not readable (yet?) after start.Jun 27 05:11:13 localhost.localdomain systemd[1]: Started TeamViewer remote control daemon.// 设置密码$ teamviewer --passwd 123456ok</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
+            
+            <tag> teamviewer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>docker-compose安装与使用</title>
+      <link href="/2019/08/16/docker-compose%20%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/"/>
+      <url>/2019/08/16/docker-compose%20%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是docker-compose"><a href="#什么是docker-compose" class="headerlink" title="什么是docker-compose"></a>什么是docker-compose</h1><p>Compose是一个用于定义和运行多个Docker容器的编排工具。可以一条命令启动多个容器。主要是解决了容器与容器之间如何管理编排的问题。</p><h1 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h1><pre><code>sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose#添加可执行权限sudo chmod +x /usr/local/bin/docker-compose#验证docker-compose --version</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><pre><code>docker-compose -f asr-compose.yml up -ddocker-compose -f asr-compose.yml stopdocker-compose -f asr-compose.yml down... </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>pkg-config简介</title>
+      <link href="/2019/08/12/pkg-config/"/>
+      <url>/2019/08/12/pkg-config/</url>
+      
+        <content type="html"><![CDATA[<p>pkg-config 维护了一个保存各个代码库的路径的数据库。当然这个”数据库” 非常的简单，其实就是一个特殊的目录，这个目录中有一系列的以 “.pc” 为后缀的文件</p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>用来检索系统中安装库文件的信息,其主要功能如下：<br>   1、检查库的版本号。如果所需要的库的版本不满足要求，它会打印出错误信息<br>，避免链接错误版本的库文件。<br>   2、获得编译预处理参数，如宏定义，头文件的位置。<br>   3、获得链接参数，如库及依赖的其它库的位置，文件名及其它一些连接参数。<br>   4、自动加入所依赖的其它库的设置。</p><h3 id="使用条件提条件"><a href="#使用条件提条件" class="headerlink" title="使用条件提条件"></a>使用条件提条件</h3><p>1、库本身在安装的时候必须提供一个相应的.pc文件，如果没有.pc文件的软件则一般是不支持pkg-config工具的使用的。<br>2、pkg-config必须知道要到哪里去寻找此.pc文件</p><p>环境变量PKG_CONFIG_PATH是用来设置.pc文件的搜索路径的，pkg-config按照设置路径的先后顺序进行搜索，直到找到指定的.pc 文件为止</p><pre><code>$ locate zlib.pc  /usr/lib64/pkgconfig/zlib.pc$ export PKG_CONFIG_PATH=/usr/local/bin/pkg-config:$PKG_CONFIG_PATH</code></pre><h3 id="查看头文件位置"><a href="#查看头文件位置" class="headerlink" title="查看头文件位置"></a>查看头文件位置</h3><pre><code># 命令形式：pkg-config --cflags software_name# demo$ pkg-config --cflags opencv</code></pre><h3 id="查看lib库的位置"><a href="#查看lib库的位置" class="headerlink" title="查看lib库的位置"></a>查看lib库的位置</h3><pre><code># 命令形式：pkg-config --libs software_name# demo$ pkg-config --libs opencv</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pkg-config </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>vim-plus安装经验谈</title>
+      <link href="/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
+      <url>/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vim-plus-安装"><a href="#vim-plus-安装" class="headerlink" title="vim plus 安装"></a>vim plus 安装</h1><p>vimPlus 的github 地址如下</p><pre><code>https://github.com/chxuan/vimplus</code></pre><p>可参考github 链接安装 vimplus。本人 linux 环境，主要进行如下操作</p><pre><code>git clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh</code></pre><h1 id="解决ycmd报错"><a href="#解决ycmd报错" class="headerlink" title="解决ycmd报错"></a>解决ycmd报错</h1><blockquote><p>如果对解决过程不感兴趣，可以直接跳到最后一部分(总结部分)，进行安装</p></blockquote><p>当使用 vim xx.cpp 打开文件时，报错</p><pre><code>The ycmd server SHUT DOWN (restart with &#39;:YcmRestartServer&#39;). Unexpected exit code 1.</code></pre><p>百度查询后，得出结论 应该是 YouCompleteMe 没有安装成功。所以重新安装之<br>执行如下命令</p><pre><code>cd ~/.vim/plugged/YouCompleteMe./install.py</code></pre><p>执行 install.py 的时候，提醒执行 git submodule update –init –recursive命令。<br>那么按照要求执行 </p><pre><code>git submodule update --init --recursive</code></pre><p>问题又来了</p><pre><code>$ git submodule update --init --recursive正克隆到 &#39;third_party/go/src/golang.org/x/tools&#39;...fatal: unable to access &#39;https://go.googlesource.com/tools/&#39;: Failed connect to go.googlesource.com:443; Connection timed out无法克隆 &#39;https://go.googlesource.com/tools&#39; 到子模组路径 &#39;third_party/go/src/golang.org/x/tools&#39;无法递归进子模组路径 &#39;third_party/ycmd&#39;</code></pre><p>网络应该是被墙了，重点来了，解决办法就是先从git上clone下来然后拷贝到相应目录：</p><pre><code>git clone https://github.com/golang/tools.gitcp -r tools ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x</code></pre><p>然后在 ~/.vim/plugged/YouCompleteMe 目录下执行一下</p><pre><code>git submodule update --init --recursive./install.py</code></pre><p>问题解决完成，可以放心使用了。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上，如果对问题的具体内容不care，可以直接参考如下安装步骤</p><pre><code>//安装vimplusgit clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh// 重装YouCompleteMecd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/xgit clone https://github.com/golang/tools.gitcd ~/.vim/plugged/YouCompleteMegit submodule update --init --recursive./install.py</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/CPP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>centos环境下安装libzip</title>
+      <link href="/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/"/>
+      <url>/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/</url>
+      
+        <content type="html"><![CDATA[<pre><code>#安装依赖工具yum install gccyum install zlib-develyum install make#下载并编译源码安装libzipwget https://nih.at/libzip/libzip-1.2.0.tar.gztar xzvf libzip-1.2.0.tar.gzcd libzip-1.2.0yum install zlib-devel./configuremakemake insatllldconfig# 设置环境变量 PATH  或者 LD_LIBRARY_PATH</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>printf、sprintf与fprintf 的用法区分</title>
+      <link href="/2018/12/10/printf%E3%80%81sprintf%E4%B8%8Efprintf%20%E7%9A%84%E7%94%A8%E6%B3%95%E5%8C%BA%E5%88%86/"/>
+      <url>/2018/12/10/printf%E3%80%81sprintf%E4%B8%8Efprintf%20%E7%9A%84%E7%94%A8%E6%B3%95%E5%8C%BA%E5%88%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="printf、sprintf与fprintf-的用法区分"><a href="#printf、sprintf与fprintf-的用法区分" class="headerlink" title="printf、sprintf与fprintf 的用法区分"></a>printf、sprintf与fprintf 的用法区分</h2><p>1.printf 是和标准输出文件(stdout)关联的,fprintf 则没有这个限制.</p><p>2.fprintf是用于文件操作的，fprintf是格式化输出到一个stream, 通常是到文件,原型是</p><pre><code>int fprintf( FILE *stream, const char *format [, argument ]...);</code></pre><p>3.sprintf是格式化输出到一个字符串,原型是：</p><pre><code>int   sprintf(char *buffer, const char *format  [,  argument]... ;</code></pre><blockquote></blockquote><p>printf输出到标准输出流(stdout)</p><p>fprintf转到文件句柄(FILE*)</p><p>sprintf转到分配的缓冲区。char*)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/CPP </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>goland 常用快捷键与激活</title>
       <link href="/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/"/>
       <url>/2018/11/30/goland%20%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E6%BF%80%E6%B4%BB/</url>
@@ -24,17 +158,6 @@
             <tag> 快捷键 </tag>
             
         </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/11/01/hello-world/"/>
-      <url>/2018/11/01/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
