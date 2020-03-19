@@ -10,7 +10,7 @@
   
   <title>
     
-      printf、sprintf与fprintf 的用法区分 | Hauk&#39;s Blog
+      expect 安装及使用 | Hauk&#39;s Blog
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -145,8 +145,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>printf、sprintf与fprintf 的用法区分</h2>
-  <p class="post-date">2018-12-10</p>
+  <h2>expect 安装及使用</h2>
+  <p class="post-date">2020-03-19</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -154,18 +154,79 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="printf、sprintf与fprintf-的用法区分"><a href="#printf、sprintf与fprintf-的用法区分" class="headerlink" title="printf、sprintf与fprintf 的用法区分"></a>printf、sprintf与fprintf 的用法区分</h2><p>1.printf 是和标准输出文件(stdout)关联的,fprintf 则没有这个限制.</p>
-<p>2.fprintf是用于文件操作的，fprintf是格式化输出到一个stream, 通常是到文件,原型是</p>
-<pre><code>int fprintf( FILE *stream, const char *format [, argument ]...);
-</code></pre><p>3.sprintf是格式化输出到一个字符串,原型是：</p>
-<pre><code>int   sprintf(char *buffer, const char *format  [,  argument]... ;
-</code></pre><blockquote>
-</blockquote>
-<p>printf输出到标准输出流(stdout)</p>
-<p>fprintf转到文件句柄(FILE*)</p>
-<p>sprintf转到分配的缓冲区。char*)</p>
-</section>
+    <section class="markdown-content"><h1 id="什么是expect"><a href="#什么是expect" class="headerlink" title="什么是expect"></a>什么是expect</h1><p>expect是基于TCL的相对简单的一个免费的脚本编程工具语言，用来实现自动和交互式任务,借助Expect，我们可以将交互过程写在一个脚本上，使之自动化完成。<br>expect工具在日常的运维中非常有用，可以用在多机器服务重启、远程copy、多机器日志查看、ftp文件操作、telnet等多种场景。shell中有些操作会受限于密码输入的人工操作，expect工具可以代替人工来完成一些交互性工作。</p>
+<h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p>下面以 centos 安装为例：</p>
+<pre><code>yum install expect -y
+</code></pre><h1 id="expect-工作流程"><a href="#expect-工作流程" class="headerlink" title="expect 工作流程"></a>expect 工作流程</h1><p>except的工作流程可以理解为：<br>spawn启动进程 –&gt; expect期待关键字 –&gt; send向进程发送字符 –&gt; 退出结束</p>
+<h1 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h1><p>expect中最关键的四个命令是spawn、expect、send、interact</p>
+<ul>
+<li>spawn: 启动新的进程，后面可接shell命令 。spawn后的send和expect命令都是和spawn打开的进程进行交互的。  </li>
+<li>expect: expect通常是用来等待一个进程的反馈，expect可以接收一个字符串参数，也可以接收正则表达式参数。</li>
+<li>send: 该命令接收一个字符串参数，并将该参数发送到进程。（类似于here document）</li>
+<li>interact：允许用户交互。利用spawn、expect、send自动化完成部分操作。<br>如果想在适当的时候干预这个过程—就用到了interact（互相影响 互相作用）</li>
+</ul>
+<p>常用注意事项：  </p>
+<ul>
+<li><p>expect eof 这个一定要加，与spawn对应表示捕获终端输出信息终止，类似于if….endif</p>
+</li>
+<li><p>expect脚本必须以interact或expect eof结束，执行自动化任务通常expect eof就够了。</p>
+</li>
+</ul>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>登录远程机器，导出某个docker容器里的文件</p>
+<pre><code>#!/bin/bash
+
+fromIp=&quot;f3005.xxxxx.zw.ted&quot;
+fromPwd=&quot;******&quot;
+fromPath=&quot;/speech/log/.&quot;
+
+
+destIp=&quot;10.142.41.88&quot;
+destPwd=&quot;******&quot;
+destPath=&quot;/search/odin/tests/log_tmp&quot;
+
+# 容器id或者 name
+dockerImage=&quot;13d65b486eef&quot; 
+
+/usr/bin/expect &lt;&lt;-EOF
+set timeout 3600
+spawn ssh  root@$fromIp
+expect {
+    &quot;yes/no&quot; { send &quot;yes\r&quot;;exp_continue }
+    &quot;password&quot; { send &quot;$fromPwd\r&quot; }
+}
+
+expect &quot;#&quot;
+send &quot;docker cp ${dockerImage}:${fromPath} ./tmp/\r&quot;
+
+expect &quot;#&quot;
+send &quot;echo docker export ---- finish\r&quot;
+
+
+expect &quot;#&quot;
+send &quot;rsync -r  ./tmp/ root@${destIp}:${destPath}\r&quot;
+
+expect {
+  &quot;yes/no&quot; { send &quot;yes\r&quot;;exp_continue }
+  &quot;password&quot; { send &quot;${destPwd}\r&quot; }
+}
+
+expect &quot;]*&quot;
+send &quot;exit\r&quot;
+
+expect eof
+exit 0
+EOF
+</code></pre></section>
     <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#expect">
+    <span class="tag-code">expect</span>
+  </a>
+
+      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
@@ -173,20 +234,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2018/11/30/goland 常用快捷键与激活/">
+      <a class="nav-left" href="/2019/08/17/centos server 安装 teamviewer 问题探索/">
         <span class="nav-arrow">← </span>
         
-          goland 常用快捷键与激活
+          centos安装teamviewer概述
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/08/10/centos 安装libzip/">
-        
-          centos环境下安装libzip
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -232,7 +286,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#printf、sprintf与fprintf-的用法区分"><span class="toc-nav-text">printf、sprintf与fprintf 的用法区分</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#什么是expect"><span class="toc-nav-text">什么是expect</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#安装方法"><span class="toc-nav-text">安装方法</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#expect-工作流程"><span class="toc-nav-text">expect 工作流程</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#命令详解"><span class="toc-nav-text">命令详解</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#示例"><span class="toc-nav-text">示例</span></a></li></ol>
     
   </div>
 </aside>
@@ -242,7 +296,7 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/12/10/printf、sprintf与fprintf 的用法区分/';
+    var url = 'http://yoursite.com/2020/03/19/expect 安装及使用/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -304,7 +358,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "printf、sprintf与fprintf 的用法区分",
+        id: "expect 安装及使用",
         owner: "",
         repo: "",
         oauth: {

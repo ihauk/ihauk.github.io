@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>expect 安装及使用</title>
+      <link href="/2020/03/19/expect%20%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/"/>
+      <url>/2020/03/19/expect%20%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是expect"><a href="#什么是expect" class="headerlink" title="什么是expect"></a>什么是expect</h1><p>expect是基于TCL的相对简单的一个免费的脚本编程工具语言，用来实现自动和交互式任务,借助Expect，我们可以将交互过程写在一个脚本上，使之自动化完成。<br>expect工具在日常的运维中非常有用，可以用在多机器服务重启、远程copy、多机器日志查看、ftp文件操作、telnet等多种场景。shell中有些操作会受限于密码输入的人工操作，expect工具可以代替人工来完成一些交互性工作。</p><h1 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h1><p>下面以 centos 安装为例：</p><pre><code>yum install expect -y</code></pre><h1 id="expect-工作流程"><a href="#expect-工作流程" class="headerlink" title="expect 工作流程"></a>expect 工作流程</h1><p>except的工作流程可以理解为：<br>spawn启动进程 –&gt; expect期待关键字 –&gt; send向进程发送字符 –&gt; 退出结束</p><h1 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h1><p>expect中最关键的四个命令是spawn、expect、send、interact</p><ul><li>spawn: 启动新的进程，后面可接shell命令 。spawn后的send和expect命令都是和spawn打开的进程进行交互的。  </li><li>expect: expect通常是用来等待一个进程的反馈，expect可以接收一个字符串参数，也可以接收正则表达式参数。</li><li>send: 该命令接收一个字符串参数，并将该参数发送到进程。（类似于here document）</li><li>interact：允许用户交互。利用spawn、expect、send自动化完成部分操作。<br>如果想在适当的时候干预这个过程—就用到了interact（互相影响 互相作用）</li></ul><p>常用注意事项：  </p><ul><li><p>expect eof 这个一定要加，与spawn对应表示捕获终端输出信息终止，类似于if….endif</p></li><li><p>expect脚本必须以interact或expect eof结束，执行自动化任务通常expect eof就够了。</p></li></ul><h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>登录远程机器，导出某个docker容器里的文件</p><pre><code>#!/bin/bashfromIp=&quot;f3005.xxxxx.zw.ted&quot;fromPwd=&quot;******&quot;fromPath=&quot;/speech/log/.&quot;destIp=&quot;10.142.41.88&quot;destPwd=&quot;******&quot;destPath=&quot;/search/odin/tests/log_tmp&quot;# 容器id或者 namedockerImage=&quot;13d65b486eef&quot; /usr/bin/expect &lt;&lt;-EOFset timeout 3600spawn ssh  root@$fromIpexpect {    &quot;yes/no&quot; { send &quot;yes\r&quot;;exp_continue }    &quot;password&quot; { send &quot;$fromPwd\r&quot; }}expect &quot;#&quot;send &quot;docker cp ${dockerImage}:${fromPath} ./tmp/\r&quot;expect &quot;#&quot;send &quot;echo docker export ---- finish\r&quot;expect &quot;#&quot;send &quot;rsync -r  ./tmp/ root@${destIp}:${destPath}\r&quot;expect {  &quot;yes/no&quot; { send &quot;yes\r&quot;;exp_continue }  &quot;password&quot; { send &quot;${destPwd}\r&quot; }}expect &quot;]*&quot;send &quot;exit\r&quot;expect eofexit 0EOF</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> expect </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>centos安装teamviewer概述</title>
       <link href="/2019/08/17/centos%20server%20%E5%AE%89%E8%A3%85%20teamviewer%20%E9%97%AE%E9%A2%98%E6%8E%A2%E7%B4%A2/"/>
       <url>/2019/08/17/centos%20server%20%E5%AE%89%E8%A3%85%20teamviewer%20%E9%97%AE%E9%A2%98%E6%8E%A2%E7%B4%A2/</url>
@@ -74,29 +97,6 @@
     </entry>
     
     <entry>
-      <title>centos环境下安装libzip</title>
-      <link href="/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/"/>
-      <url>/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/</url>
-      
-        <content type="html"><![CDATA[<pre><code>#安装依赖工具yum install gccyum install zlib-develyum install make#下载并编译源码安装libzipwget https://nih.at/libzip/libzip-1.2.0.tar.gztar xzvf libzip-1.2.0.tar.gzcd libzip-1.2.0yum install zlib-devel./configuremakemake insatllldconfig# 设置环境变量 PATH  或者 LD_LIBRARY_PATH</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> centos </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>vim-plus安装经验谈</title>
       <link href="/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
       <url>/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/</url>
@@ -114,6 +114,29 @@
         <tags>
             
             <tag> vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>centos环境下安装libzip</title>
+      <link href="/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/"/>
+      <url>/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/</url>
+      
+        <content type="html"><![CDATA[<pre><code>#安装依赖工具yum install gccyum install zlib-develyum install make#下载并编译源码安装libzipwget https://nih.at/libzip/libzip-1.2.0.tar.gztar xzvf libzip-1.2.0.tar.gzcd libzip-1.2.0yum install zlib-devel./configuremakemake insatllldconfig# 设置环境变量 PATH  或者 LD_LIBRARY_PATH</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
             
         </tags>
       
