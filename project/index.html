@@ -10,7 +10,7 @@
   
   <title>
     
-      Hauk&#39;s Blog
+      Project | Hauk&#39;s Blog
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -145,116 +145,54 @@
 </header>
 
     <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
+  <h2>Projects</h2>
+  <p class="post-date">开源项目</p>
 </div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2019
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2019/08/17/centos server 安装 teamviewer 问题探索/" class="archive-title">centos安装teamviewer概述</a>
-        <p class="archive-date">08-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2019/08/16/docker-compose 学习教程/" class="archive-title">docker-compose安装与使用</a>
-        <p class="archive-date">08-16</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2019/08/12/pkg-config/" class="archive-title">pkg-config简介</a>
-        <p class="archive-date">08-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2019/08/10/vim-plus 安装经验/" class="archive-title">vim-plus安装经验谈</a>
-        <p class="archive-date">08-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2019/08/10/centos 安装libzip/" class="archive-title">centos环境下安装libzip</a>
-        <p class="archive-date">08-10</p>
-      </div>
-    
-  </div>
-</section>
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2018
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2018/12/10/printf、sprintf与fprintf 的用法区分/" class="archive-title">printf、sprintf与fprintf 的用法区分</a>
-        <p class="archive-date">12-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2018/11/30/goland 常用快捷键与激活/" class="archive-title">goland 常用快捷键与激活</a>
-        <p class="archive-date">11-30</p>
-      </div>
-    
-  </div>
-</section>
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2016
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2016/11/28/IM/" class="archive-title">IM</a>
-        <p class="archive-date">11-28</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2016/06/18/MAC环境安装protobuf简明教程/" class="archive-title">MAC环境安装protobuf简明教程</a>
-        <p class="archive-date">06-18</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2016/03/16/Mac 开启root用户/" class="archive-title">Mac开启root用户</a>
-        <p class="archive-date">03-16</p>
-      </div>
-    
-  </div>
-</section>
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2015
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2015/12/10/xcode键盘君的常用快捷键及设置/" class="archive-title">xcode键盘君的常用快捷键及设置</a>
-        <p class="archive-date">12-10</p>
-      </div>
-    
-  </div>
-</section>
-  
+<main class="app-body project-app">
+  <div class="card-container" id="all-project"></div>
 </main>
-
 <script>
-  (function () {
-    var url = 'http://yoursite.com/categories/C-CPP/index.html';
+  (function() {
+    var url = 'http://yoursite.com/project/index.html';
     $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
+    $('.header').removeClass('fixed-header')
+    $.ajax({
+      headers: {
+        Accept: 'application/vnd.github.v3.raw'
+      },
+      type: 'get',
+      url: 'https://api.github.com/users/ihauk/repos',
+      success: function (data) {
+        var repos = data.sort(function(a, b) {
+          return (b.stargazers_count - a.stargazers_count)
+        }).slice(0, 6)
+        var cardHtml = repos.map(function(item) {
+          var description = item.description || ""
+          if (description.replace(/[\u0391-\uFFE5]/g, "aa").length > 72) {
+            description = description.slice(0, 72) + '...'
+          }
+          return (
+            '<section class="project-card">' + 
+              '<a class="card-wrap" href="'+ item.html_url +'" target="_blank">' +
+                '<div class="card-header" data-name="'+ item.name +'"></div>' +
+                '<h3 class="card-title">' + item.name + '</h3>' +
+                '<p class="card-description">' + description + '</p>' +
+                '<div class="card-footer">' +
+                  '<span><i class="fa fa-star"></i>'+ item.stargazers_count +'</span>' +
+                  '<span><i class="fa fa-code-fork"></i>' + item.forks_count +'</span>' +
+                '</div>' +
+              '</a>' +
+            '</section>'
+          )
+        }).join('')
+        $('#all-project').html(cardHtml)
+        $('.card-header').each(function() {
+          var name = $(this).data('name');
+          $(this).geopattern(name);
+        })
+      }
+    });
+  })()
 </script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>

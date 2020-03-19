@@ -74,29 +74,6 @@
     </entry>
     
     <entry>
-      <title>vim-plus安装经验谈</title>
-      <link href="/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
-      <url>/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/</url>
-      
-        <content type="html"><![CDATA[<h1 id="vim-plus-安装"><a href="#vim-plus-安装" class="headerlink" title="vim plus 安装"></a>vim plus 安装</h1><p>vimPlus 的github 地址如下</p><pre><code>https://github.com/chxuan/vimplus</code></pre><p>可参考github 链接安装 vimplus。本人 linux 环境，主要进行如下操作</p><pre><code>git clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh</code></pre><h1 id="解决ycmd报错"><a href="#解决ycmd报错" class="headerlink" title="解决ycmd报错"></a>解决ycmd报错</h1><blockquote><p>如果对解决过程不感兴趣，可以直接跳到最后一部分(总结部分)，进行安装</p></blockquote><p>当使用 vim xx.cpp 打开文件时，报错</p><pre><code>The ycmd server SHUT DOWN (restart with &#39;:YcmRestartServer&#39;). Unexpected exit code 1.</code></pre><p>百度查询后，得出结论 应该是 YouCompleteMe 没有安装成功。所以重新安装之<br>执行如下命令</p><pre><code>cd ~/.vim/plugged/YouCompleteMe./install.py</code></pre><p>执行 install.py 的时候，提醒执行 git submodule update –init –recursive命令。<br>那么按照要求执行 </p><pre><code>git submodule update --init --recursive</code></pre><p>问题又来了</p><pre><code>$ git submodule update --init --recursive正克隆到 &#39;third_party/go/src/golang.org/x/tools&#39;...fatal: unable to access &#39;https://go.googlesource.com/tools/&#39;: Failed connect to go.googlesource.com:443; Connection timed out无法克隆 &#39;https://go.googlesource.com/tools&#39; 到子模组路径 &#39;third_party/go/src/golang.org/x/tools&#39;无法递归进子模组路径 &#39;third_party/ycmd&#39;</code></pre><p>网络应该是被墙了，重点来了，解决办法就是先从git上clone下来然后拷贝到相应目录：</p><pre><code>git clone https://github.com/golang/tools.gitcp -r tools ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x</code></pre><p>然后在 ~/.vim/plugged/YouCompleteMe 目录下执行一下</p><pre><code>git submodule update --init --recursive./install.py</code></pre><p>问题解决完成，可以放心使用了。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上，如果对问题的具体内容不care，可以直接参考如下安装步骤</p><pre><code>//安装vimplusgit clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh// 重装YouCompleteMecd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/xgit clone https://github.com/golang/tools.gitcd ~/.vim/plugged/YouCompleteMegit submodule update --init --recursive./install.py</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> C/CPP </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vim </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>centos环境下安装libzip</title>
       <link href="/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/"/>
       <url>/2019/08/10/centos%20%E5%AE%89%E8%A3%85libzip/</url>
@@ -114,6 +91,29 @@
         <tags>
             
             <tag> centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>vim-plus安装经验谈</title>
+      <link href="/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
+      <url>/2019/08/10/vim-plus%20%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vim-plus-安装"><a href="#vim-plus-安装" class="headerlink" title="vim plus 安装"></a>vim plus 安装</h1><p>vimPlus 的github 地址如下</p><pre><code>https://github.com/chxuan/vimplus</code></pre><p>可参考github 链接安装 vimplus。本人 linux 环境，主要进行如下操作</p><pre><code>git clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh</code></pre><h1 id="解决ycmd报错"><a href="#解决ycmd报错" class="headerlink" title="解决ycmd报错"></a>解决ycmd报错</h1><blockquote><p>如果对解决过程不感兴趣，可以直接跳到最后一部分(总结部分)，进行安装</p></blockquote><p>当使用 vim xx.cpp 打开文件时，报错</p><pre><code>The ycmd server SHUT DOWN (restart with &#39;:YcmRestartServer&#39;). Unexpected exit code 1.</code></pre><p>百度查询后，得出结论 应该是 YouCompleteMe 没有安装成功。所以重新安装之<br>执行如下命令</p><pre><code>cd ~/.vim/plugged/YouCompleteMe./install.py</code></pre><p>执行 install.py 的时候，提醒执行 git submodule update –init –recursive命令。<br>那么按照要求执行 </p><pre><code>git submodule update --init --recursive</code></pre><p>问题又来了</p><pre><code>$ git submodule update --init --recursive正克隆到 &#39;third_party/go/src/golang.org/x/tools&#39;...fatal: unable to access &#39;https://go.googlesource.com/tools/&#39;: Failed connect to go.googlesource.com:443; Connection timed out无法克隆 &#39;https://go.googlesource.com/tools&#39; 到子模组路径 &#39;third_party/go/src/golang.org/x/tools&#39;无法递归进子模组路径 &#39;third_party/ycmd&#39;</code></pre><p>网络应该是被墙了，重点来了，解决办法就是先从git上clone下来然后拷贝到相应目录：</p><pre><code>git clone https://github.com/golang/tools.gitcp -r tools ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/x</code></pre><p>然后在 ~/.vim/plugged/YouCompleteMe 目录下执行一下</p><pre><code>git submodule update --init --recursive./install.py</code></pre><p>问题解决完成，可以放心使用了。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>综上，如果对问题的具体内容不care，可以直接参考如下安装步骤</p><pre><code>//安装vimplusgit clone https://github.com/chxuan/vimplus.git ~/.vimpluscd ~/.vimplus./install.sh// 重装YouCompleteMecd ~/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party/go/src/golang.org/xgit clone https://github.com/golang/tools.gitcd ~/.vim/plugged/YouCompleteMegit submodule update --init --recursive./install.py</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/CPP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vim </tag>
             
         </tags>
       

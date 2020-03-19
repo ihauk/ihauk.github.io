@@ -1,539 +1,303 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="搞清楚-想透彻- 做到位-讲明白">
+  <meta name="keyword" content="移动端, 服务端">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
     
+      Hauk&#39;s Blog
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/css/plugins/gitment.css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Hauk&#39;s Blog">
-    <meta name="description" content="Hauk&#39;s Blog">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hauk&#39;s Blog</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+  
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
 
-</head>
-
-<body>
-
-<header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="container">
-            <div class="nav-wrapper">
-                <div class="brand-logo">
-                    <a href="/" class="waves-effect waves-light">
-                        
-                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
-                        
-                        <span class="logo-span">Hauk's Blog</span>
-                    </a>
-                </div>
-                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
-<ul class="right">
-    
-    <li class="hide-on-med-and-down">
-        <a href="/" class="waves-effect waves-light">
-            
-            <i class="fa fa-home"></i>
-            
-            <span>Index</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/tags" class="waves-effect waves-light">
-            
-            <i class="fa fa-tags"></i>
-            
-            <span>Tags</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/categories" class="waves-effect waves-light">
-            
-            <i class="fa fa-bookmark"></i>
-            
-            <span>Categories</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/archives" class="waves-effect waves-light">
-            
-            <i class="fa fa-archive"></i>
-            
-            <span>Archives</span>
-        </a>
-    </li>
-    
-    <li class="hide-on-med-and-down">
-        <a href="/about" class="waves-effect waves-light">
-            
-            <i class="fa fa-user-circle-o"></i>
-            
-            <span>About</span>
-        </a>
-    </li>
-    
-    <li>
-        <a id="toggleSearch" class="waves-effect waves-light">
-            <i id="searchIcon" class="mdi-action-search"></i>
-        </a>
-    </li>
-
-</ul>
-
-<div class="side-nav" id="mobile-nav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">Hauk's Blog</div>
-        <div class="logo-desc">
-            
-            搞清楚-想透彻- 做到位-讲明白
-            
-        </div>
-    </div>
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li>
-            <a href="/" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-home"></i>
-                
-                Index
-            </a>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hauk's Blog</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
         </li>
-        
-        <li>
-            <a href="/tags" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-tags"></i>
-                
-                Tags
-            </a>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
         </li>
-        
-        <li>
-            <a href="/categories" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-bookmark"></i>
-                
-                Categories
-            </a>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
         </li>
-        
-        <li>
-            <a href="/archives" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-archive"></i>
-                
-                Archives
-            </a>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
         </li>
-        
-        <li>
-            <a href="/about" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-user-circle-o"></i>
-                
-                About
-            </a>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
         </li>
-        
-        
+      
     </ul>
-
-    <div class="social-link"><a href="https://github.com/ihauk" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
-<a href="mailto:ihauk@foxmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-    <i class="fa fa-envelope-open"></i>
-</a>
-<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 710126898" data-position="top" data-delay="50">
-    <i class="fa fa-qq"></i>
-</a>
-</div>
-</div>
-
-            </div>
-        </div>
-
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-    </nav>
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 </header>
 
-<style type="text/css">
-    /* don't remove. */
-    .index-cover {
-        height: 100vh;
-    }
-</style>
-
-<div class="bg-cover index-cover about-cover" style="background-image: url('/medias/cover.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-                <div class="brand">
-                    <div class="title center-align">
-                    
-                        哆啦A浩：从移动端跑路的后台开发
-                    
-                    </div>
-
-                    <div class="description center-align">
-                    
-                        搞清楚-想透彻- 做到位-讲明白
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/08/17/centos server 安装 teamviewer 问题探索/">centos安装teamviewer概述</a>
+      </h2>
+      <p class="article-date">2019年8月17日</p>
+      
         
-        <div class="cover-btns">
-            <a href="#recommend-sections" class="waves-effect waves-light btn">
-                <i class="fa fa-angle-double-down"></i>继续阅读
-            </a>
+  <a href="/tags#centos">
+    <span class="tag-code">centos</span>
+  </a>
 
-            
-            <a href="https://github.com/ihauk" class="waves-effect waves-light btn" target="_blank">
-                <i class="fa fa-github-alt"></i>Github
-            </a>
-            
-        </div>
-        <div class="cover-social-link"><a href="https://github.com/ihauk" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
-<a href="mailto:ihauk@foxmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-    <i class="fa fa-envelope-open"></i>
-</a>
-<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 710126898" data-position="top" data-delay="50">
-    <i class="fa fa-qq"></i>
-</a>
-</div>
+  <a href="/tags#teamviewer">
+    <span class="tag-code">teamviewer</span>
+  </a>
+
+      
+      <div class="article-summary">
         
-    </div>
-</div>
+          历史版本安装连接https://community.teamviewer.com/t5/TeamViewer-Knowledge-Base-ZH/%E6%88%91%E5%8F%AF%E4%BB%A5%E5%9C%A8%E5%93%AA%E9%87%8C%E4%B8%8B%E8%BD%BD- ...
+        
+      </div>
+      <a class="more" href="/2019/08/17/centos server 安装 teamviewer 问题探索/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/08/16/docker-compose 学习教程/">docker-compose安装与使用</a>
+      </h2>
+      <p class="article-date">2019年8月16日</p>
+      
+        
+  <a href="/tags#docker">
+    <span class="tag-code">docker</span>
+  </a>
 
-<script>
-// Dynamically switch banner pictures every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
-</script>
+      
+      <div class="article-summary">
+        
+          什么是docker-composeCompose是一个用于定义和运行多个Docker容器的编排工具。可以一条命令启动多个容器。主要是解决了容器与容器之间如何管理编排的问题。
+下载安装sudo curl -L https://github.com/docker/compose/releases ...
+        
+      </div>
+      <a class="more" href="/2019/08/16/docker-compose 学习教程/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/08/12/pkg-config/">pkg-config简介</a>
+      </h2>
+      <p class="article-date">2019年8月12日</p>
+      
+        
+  <a href="/tags#pkg-config">
+    <span class="tag-code">pkg-config</span>
+  </a>
 
-<main class="content">
+      
+      <div class="article-summary">
+        
+          pkg-config 维护了一个保存各个代码库的路径的数据库。当然这个”数据库” 非常的简单，其实就是一个特殊的目录，这个目录中有一系列的以 “.pc” 为后缀的文件
+作用用来检索系统中安装库文件的信息,其主要功能如下：   1、检查库的版本号。如果所需要的库的版本不满足要求，它会打印出错误 ...
+        
+      </div>
+      <a class="more" href="/2019/08/12/pkg-config/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/08/10/centos 安装libzip/">centos环境下安装libzip</a>
+      </h2>
+      <p class="article-date">2019年8月10日</p>
+      
+        
+  <a href="/tags#centos">
+    <span class="tag-code">centos</span>
+  </a>
 
-    
-
-    <div id="recommend-sections">
-    
-    
-
-
-
-    
-    </div>
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/08/17/centos server 安装 teamviewer 问题探索/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="centos安装teamviewer概述">
-                            
-                            <span class="card-title">centos安装teamviewer概述</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">历史版本安装连接https://community.teamviewer.com/t5/TeamViewer-Knowledge-Base-</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/centos/" target="_blank">
-                            <span class="chip bg-color">centos</span>
-                        </a>
-                        
-                        <a href="/tags/teamviewer/" target="_blank">
-                            <span class="chip bg-color">teamviewer</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/08/16/docker-compose 学习教程/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="docker-compose安装与使用">
-                            
-                            <span class="card-title">docker-compose安装与使用</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">什么是docker-composeCompose是一个用于定义和运行多个Docker容器的编排工具。可以一条命令启动多个容器。主要是解决了容</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/docker/" target="_blank">
-                            <span class="chip bg-color">docker</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/08/12/pkg-config/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="pkg-config简介">
-                            
-                            <span class="card-title">pkg-config简介</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">pkg-config 维护了一个保存各个代码库的路径的数据库。当然这个”数据库” 非常的简单，其实就是一个特殊的目录，这个目录中有一系列的以</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/pkg-config/" target="_blank">
-                            <span class="chip bg-color">pkg-config</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/08/10/vim-plus 安装经验/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="vim-plus安装经验谈">
-                            
-                            <span class="card-title">vim-plus安装经验谈</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">vim plus 安装vimPlus 的github 地址如下
-https://github.com/chxuan/vimplus
-可参考g</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/C-CPP/" class="post-category" target="_blank">
-                                    C/CPP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/vim/" target="_blank">
-                            <span class="chip bg-color">vim</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/08/10/centos 安装libzip/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="centos环境下安装libzip">
-                            
-                            <span class="card-title">centos环境下安装libzip</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">#安装依赖工具
+      
+      <div class="article-summary">
+        
+          #安装依赖工具
 yum install gcc
 yum install zlib-devel
 yum install make
 
-#下载并编</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+#下载并编译源码安装libzip
+wget https://nih.at/libzip/libzip-1.2.0.tar.gz
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/centos/" target="_blank">
-                            <span class="chip bg-color">centos</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/12/10/printf、sprintf与fprintf 的用法区分/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="printf、sprintf与fprintf 的用法区分">
-                            
-                            <span class="card-title">printf、sprintf与fprintf 的用法区分</span>
-                        </div>
-                    </a>
+tar xzvf libzip- ...
+        
+      </div>
+      <a class="more" href="/2019/08/10/centos 安装libzip/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/08/10/vim-plus 安装经验/">vim-plus安装经验谈</a>
+      </h2>
+      <p class="article-date">2019年8月10日</p>
+      
+        
+  <a href="/tags#vim">
+    <span class="tag-code">vim</span>
+  </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary">printf、sprintf与fprintf 的用法区分1.printf 是和标准输出文件(stdout)关联的,fprintf 则没有这个</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/C-CPP/" class="post-category" target="_blank">
-                                    C/CPP
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+      
+      <div class="article-summary">
+        
+          vim plus 安装vimPlus 的github 地址如下
+https://github.com/chxuan/vimplus
+可参考github 链接安装 vimplus。本人 linux 环境，主要进行如下操作
+git clone https://github.com/chxuan/ ...
+        
+      </div>
+      <a class="more" href="/2019/08/10/vim-plus 安装经验/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/12/10/printf、sprintf与fprintf 的用法区分/">printf、sprintf与fprintf 的用法区分</a>
+      </h2>
+      <p class="article-date">2018年12月10日</p>
+      
+      <div class="article-summary">
+        
+          printf、sprintf与fprintf 的用法区分1.printf 是和标准输出文件(stdout)关联的,fprintf 则没有这个限制.
+2.fprintf是用于文件操作的，fprintf是格式化输出到一个stream, 通常是到文件,原型是
+int fprintf( FILE * ...
+        
+      </div>
+      <a class="more" href="/2018/12/10/printf、sprintf与fprintf 的用法区分/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/11/30/goland 常用快捷键与激活/">goland 常用快捷键与激活</a>
+      </h2>
+      <p class="article-date">2018年11月30日</p>
+      
+        
+  <a href="/tags#goland">
+    <span class="tag-code">goland</span>
+  </a>
 
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2018/11/30/goland 常用快捷键与激活/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="goland 常用快捷键与激活">
-                            
-                            <span class="card-title">goland 常用快捷键与激活</span>
-                        </div>
-                    </a>
+  <a href="/tags#快捷键">
+    <span class="tag-code">快捷键</span>
+  </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary">常用快捷键总结如下列表为 windows 系统上的常用快捷键
+      
+      <div class="article-summary">
+        
+          常用快捷键总结如下列表为 windows 系统上的常用快捷键
 
 
 
@@ -546,255 +310,163 @@ yum install make
 
 ctrl + e
 打开最近使用过的文件
-</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/go/" class="post-category" target="_blank">
-                                    go
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/goland/" target="_blank">
-                            <span class="chip bg-color">goland</span>
-                        </a>
-                        
-                        <a href="/tags/快捷键/" target="_blank">
-                            <span class="chip bg-color">快捷键</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2016/11/28/IM/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="IM">
-                            
-                            <span class="card-title">IM</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary">WebRTC相关
-webrtc 源码分析http://blog.csdn.net/kenny_zh/article/category/248</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-11-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                Hauk.Zhu
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2016/06/18/MAC环境安装protobuf简明教程/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="MAC环境安装protobuf简明教程">
-                            
-                            <span class="card-title">MAC环境安装protobuf简明教程</span>
-                        </div>
-                    </a>
+ctrl + q
+显示选中函数的声明以及注释内容
 
-                    <div class="card-content article-content">
-                        <div class="summary">protobuf 是什么？ 请百度！本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！废话不多说</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-06-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                Hauk.Zhu
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/mac/" target="_blank">
-                            <span class="chip bg-color">mac</span>
-                        </a>
-                        
-                        <a href="/tags/protobuf/" target="_blank">
-                            <span class="chip bg-color">protobuf</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2016/03/16/Mac 开启root用户/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Mac开启root用户">
-                            
-                            <span class="card-title">Mac开启root用户</span>
-                        </div>
-                    </a>
 
-                    <div class="card-content article-content">
-                        <div class="summary">
-从 Apple 菜单中选取系统偏好设置…。
+alt  + q
+查看当前光标所在方法的名称
 
-从显示菜单中选取用户与群组。
 
-点按锁图标并使用管理员帐户进行鉴定。
 
-点按“登录选项…”。</div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2016-03-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Mac/" class="post-category" target="_blank">
-                                    Mac
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/mac/" target="_blank">
-                            <span class="chip bg-color">mac</span>
-                        </a>
-                        
-                        <a href="/tags/root/" target="_blank">
-                            <span class="chip bg-color">root</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
+ctrl + x
+删除当前光标所在行
+ ...
+        
+      </div>
+      <a class="more" href="/2018/11/30/goland 常用快捷键与激活/">Read more</a>
     </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/11/28/IM/">IM</a>
+      </h2>
+      <p class="article-date">2016年11月28日</p>
+      
+      <div class="article-summary">
+        
+          WebRTC相关
+webrtc 源码分析http://blog.csdn.net/kenny_zh/article/category/2487849
 
+http://feixiao.github.io/2015/07/02/webrtc_2/
+
+        
+      </div>
+      <a class="more" href="/2016/11/28/IM/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/06/18/MAC环境安装protobuf简明教程/">MAC环境安装protobuf简明教程</a>
+      </h2>
+      <p class="article-date">2016年6月18日</p>
+      
+        
+  <a href="/tags#mac">
+    <span class="tag-code">mac</span>
+  </a>
+
+  <a href="/tags#protobuf">
+    <span class="tag-code">protobuf</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          protobuf 是什么？ 请百度！本文的主要目的是记录安装 protobuf 的历程，以备以后查阅，同时供大家参考，请多多指教！废话不多说，直接上步骤：
+1. 下载 protobuf 的源码：git clone https://github.com/google/protobuf.git  ...
+        
+      </div>
+      <a class="more" href="/2016/06/18/MAC环境安装protobuf简明教程/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/03/16/Mac 开启root用户/">Mac开启root用户</a>
+      </h2>
+      <p class="article-date">2016年3月16日</p>
+      
+        
+  <a href="/tags#mac">
+    <span class="tag-code">mac</span>
+  </a>
+
+  <a href="/tags#root">
+    <span class="tag-code">root</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <ol>
+<li><p>从 Apple 菜单中选取系统偏好设置…。</p>
+</li>
+<li><p>从显示菜单中选取用户与群组。</p>
+</li>
+<li><p>点按锁图标并使用管理员帐户进行鉴定。</p>
+</li>
+<li><p>点按“登录选项…”。<br><img src="http://static.oschina.net/uploads/space/2015/0512/185731_tLZ4_218940.png" alt="在此输入图片描述"></p>
+        
+      </li></ol></div>
+      <a class="more" href="/2016/03/16/Mac 开启root用户/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a class="unvisible" href="/"><span class="page-arrow">←</span> Prev</a>
+  
+  
+    <a href="/page/2/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
 </main>
 
 
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a class="left btn-floating btn-large disabled">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/page/2/" class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fa fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
 </div>
-
-
-
-<footer class="page-footer bg-color">
-    <div class="container row center-align">
-        <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">Blinkfox</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 采用
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>的主题搭建.
-        </div>
-        <div class="col s12 m4 l4 social-link"><a href="https://github.com/ihauk" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-    <i class="fa fa-github"></i>
-</a>
-<a href="mailto:ihauk@foxmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-    <i class="fa fa-envelope-open"></i>
-</a>
-<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 710126898" data-position="top" data-delay="50">
-    <i class="fa fa-qq"></i>
-</a>
-</div>
-
-    </div>
-
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-<div class="progress-bar"></div>
-
-
-    
-
-
-<!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title">搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
 </script>
-<!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fa fa-angle-up"></i>
-    </a>
-</div>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
 
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
 
-<script src="/libs/materialize/js/materialize.min.js"></script>
-<script src="/libs/masonry/masonry.pkgd.min.js"></script>
-<script src="/libs/aos/aos.js"></script>
-<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-<script src="/js/matery.js"></script>
-</body>
+<script src="/js/script.js"></script>
+  </body>
 </html>
